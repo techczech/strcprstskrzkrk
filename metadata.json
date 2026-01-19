@@ -1,0 +1,7 @@
+{
+  "name": "Strč prst skrz krk",
+  "description": "A fun and interactive Czech tongue twister challenge app helping you master pronunciation through AI-powered feedback and step-by-step practice.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
