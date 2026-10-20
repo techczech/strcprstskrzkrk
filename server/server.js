@@ -208,37 +208,58 @@ function injectScripts(html) {
     return `${webSocketInterceptorScriptTag}${serviceWorkerRegistrationScript}${html}`;
 }
 
-// Map a request path to its generated page: "/" -> dist/index.html, "/roles" -> dist/roles/index.html.
-function pageFileFor(reqPath) {
-    let decoded;
-    try { decoded = decodeURIComponent(reqPath); } catch (e) { return null; }
-    const target = path.join(staticPath, decoded, 'index.html');
+// Only plain route paths are ever served or redirected: a single leading "/", then
+// segments of letters, digits, "." "_" "~" "-" (no "//", backslashes or percent-escapes).
+const ROUTE_PATH = /^\/(?:[A-Za-z0-9._~-]+(?:\/[A-Za-z0-9._~-]+)*\/?)?$/;
+
+// Map a validated route to its generated page: "/" -> dist/index.html, "/roles" -> dist/roles/index.html.
+function pageFileFor(route) {
+    if (route.split('/').some((seg) => seg === '.' || seg === '..')) return null;
+    const target = path.join(staticPath, route, 'index.html');
     if (!target.startsWith(staticPath + path.sep)) return null; // no path traversal
     return target;
 }
 
 // Serve index.html and every generated page (dist/<route>/index.html), with script injection.
 app.get('*', (req, res, next) => {
-    // One URL per page: /roles/ redirects to /roles
-    if (req.path.length > 1 && req.path.endsWith('/')) {
-        const query = req.url.slice(req.path.length);
-        return res.redirect(301, req.path.replace(/\/+$/, '') + query);
-    }
-    const pageFile = pageFileFor(req.path);
+    if (!ROUTE_PATH.test(req.path)) return next();
+
+    // One URL per page: /roles/ and /roles/index.html redirect to /roles (same-origin, validated path).
+    let route = req.path;
+    if (route.endsWith('/index.html')) route = route.slice(0, -'index.html'.length);
+    if (route.length > 1) route = route.replace(/\/+$/, '');
+    if (route === '') route = '/';
+
+    const pageFile = pageFileFor(route);
     if (!pageFile) return next();
+
+    if (route !== req.path) {
+        if (!fs.existsSync(pageFile)) return next();
+        return res.redirect(301, route + req.url.slice(req.path.length));
+    }
+
+    // If API key is not set, serve the original HTML without injection
+    if (!apiKey) {
+        return fs.access(pageFile, fs.constants.R_OK, (err) => {
+            if (err) {
+                if (route === '/') {
+                    console.log('LOG: index.html not found or unreadable. Falling back to original placeholder.');
+                    return res.sendFile(path.join(publicPath, 'placeholder.html'));
+                }
+                return next();
+            }
+            res.sendFile(pageFile);
+        });
+    }
 
     fs.readFile(pageFile, 'utf8', (err, htmlData) => {
         if (err) {
-            if (req.path === '/') {
+            if (route === '/') {
                 // index.html not found or unreadable, serve the original placeholder
                 console.log('LOG: index.html not found or unreadable. Falling back to original placeholder.');
                 return res.sendFile(path.join(publicPath, 'placeholder.html'));
             }
             return next();
-        }
-        // If API key is not set, serve original HTML without injection
-        if (!apiKey) {
-            return res.type('html').send(htmlData);
         }
         res.type('html').send(injectScripts(htmlData));
     });
