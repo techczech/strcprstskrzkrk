@@ -130,3 +130,6 @@ export const DIFFICULT_SOUNDS: SoundGuideContent[] = [
     example: 'Kůň, Měňavka'
   }
 ];
+
+export const SITE_INTRO =
+  'Explore the weird and wonderful world of Czech tongue twisters. Record your attempts, track your progress, and master the impossible consonants.';

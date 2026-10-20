@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { INITIAL_TWISTERS, DIFFICULT_SOUNDS } from './constants';
+import { INITIAL_TWISTERS, DIFFICULT_SOUNDS, SITE_INTRO } from './constants';
 import { TwisterContent, TwisterProgress } from './types';
 import PracticeMode from './components/PracticeMode';
 import { getProgress } from './services/storageService';
@@ -129,8 +129,7 @@ const App: React.FC = () => {
             </div>
 
             <p className="max-w-2xl mx-auto text-xl text-slate-600 leading-relaxed mb-10">
-                Explore the weird and wonderful world of Czech tongue twisters. 
-                Record your attempts, track your progress, and master the impossible consonants.
+                {SITE_INTRO}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href="#list" className="px-8 py-4 bg-indigo-600 text-white rounded-2xl font-bold text-lg hover:bg-indigo-700 transition-all shadow-lg hover:shadow-indigo-200 flex items-center justify-center gap-2">
