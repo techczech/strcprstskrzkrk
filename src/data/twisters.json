@@ -1,0 +1,134 @@
+[
+  {
+    "slug": "strc-prst-skrz-krk",
+    "text": "Strč prst skrz krk.",
+    "translation": "Stick a finger through your throat.",
+    "level": "Medium",
+    "trains": ["syllabic r", "consonant clusters"],
+    "ipa": "str̩tʃ pr̩st skr̩s kr̩k",
+    "about": "The most famous Czech tongue twister. Four words and not one vowel letter: in each word the r carries the syllable, as a vowel would.",
+    "tips": [
+      "Each word is one syllable, and the r is its core. Do not slip in a hidden vowel: krk, not kerk.",
+      "Stress the start of every word, so you get four even beats.",
+      "The z of skrz sounds like s, because the k after it is voiceless."
+    ],
+    "steps": ["krk", "skrz krk", "prst skrz krk", "Strč prst skrz krk."]
+  },
+  {
+    "slug": "smrz-pln-skvrn",
+    "text": "Smrž pln skvrn zvlhl z mlh.",
+    "translation": "A morel full of spots grew damp from the mists.",
+    "level": "Hard",
+    "trains": ["syllabic r", "syllabic l", "voicing at word ends"],
+    "ipa": "smr̩ʃ pl̩n skvr̩n zvl̩ɦl̩ z‿ml̩x",
+    "about": "A whole sentence with no vowel letters at all. Here l takes a turn as the core of the syllable as well as r.",
+    "tips": [
+      "Zvlhl has two syllables, zvl-hl, each built round an l.",
+      "Word-final ž and h lose their voice: smrž ends in a sh sound, mlh in a ch sound.",
+      "Z and mlh are said as one word, with no pause between them."
+    ],
+    "steps": ["z mlh", "zvlhl z mlh", "skvrn zvlhl z mlh", "pln skvrn zvlhl z mlh", "Smrž pln skvrn zvlhl z mlh."]
+  },
+  {
+    "slug": "vlky-plky",
+    "text": "Vlky plky.",
+    "translation": "Wolves, waffle.",
+    "level": "Easy",
+    "trains": ["syllabic l"],
+    "ipa": "vl̩kɪ pl̩kɪ",
+    "about": "A two-word warm-up. In vlky and plky the l works as the vowel of the first syllable.",
+    "tips": [
+      "Hold the l for a moment, as you would a vowel: vl-ky, pl-ky.",
+      "The y at the end is a short i sound, as in bit."
+    ],
+    "steps": ["plky", "Vlky plky."]
+  },
+  {
+    "slug": "pan-kaplan",
+    "text": "Pan kaplan v kapli plakal.",
+    "translation": "The chaplain wept in the chapel.",
+    "level": "Easy",
+    "trains": ["p, k and l in quick succession", "v before a voiceless consonant"],
+    "ipa": "pan kaplan f‿kaplɪ plakal",
+    "about": "Short and gentle, but the same three consonants keep swapping places, which trips the tongue at speed.",
+    "tips": [
+      "The v before kapli sounds like f and joins the next word: fkapli.",
+      "Czech p and k have no puff of air after them, unlike English p and k."
+    ],
+    "steps": ["plakal", "v kapli plakal", "kaplan v kapli plakal", "Pan kaplan v kapli plakal."]
+  },
+  {
+    "slug": "sel-pstros",
+    "text": "Šel pštros s pštrosicí a pštrosáčaty.",
+    "translation": "An ostrich went walking with a female ostrich and their ostrich chicks.",
+    "level": "Medium",
+    "trains": ["š", "č", "the pšt cluster"],
+    "ipa": "ʃɛl pʃtros s‿pʃtrosɪt͡siː a pʃtrosaːt͡ʃatɪ",
+    "about": "A drill for š and č, with the pšt cluster four times over.",
+    "tips": [
+      "Pšt is one quick movement: lips for p, then sh, then a light t.",
+      "The lone s joins the next word: spštrosicí.",
+      "Keep the long vowels long: pštrosicí, pštrosáčaty."
+    ],
+    "steps": ["pštrosáčaty", "a pštrosáčaty", "s pštrosicí a pštrosáčaty", "pštros s pštrosicí a pštrosáčaty", "Šel pštros s pštrosicí a pštrosáčaty."]
+  },
+  {
+    "slug": "kmotre-petre",
+    "text": "Kmotře Petře, nepřepepřete mi toho vepře.",
+    "translation": "Godfather Peter, don't over-pepper that pork for me.",
+    "level": "Medium",
+    "trains": ["ř after p and t"],
+    "ipa": "kmotr̝̊ɛ pɛtr̝̊ɛ nɛpr̝̊ɛpɛpr̝̊ɛtɛ mɪ toɦo vɛpr̝̊ɛ",
+    "about": "A rhyming drill with ř six times, always straight after p or t.",
+    "tips": [
+      "After p and t, ř loses its voice and sounds more hissed than buzzed.",
+      "Nepřepepřete has five syllables: ne-pře-pe-pře-te. Say it slowly before you speed up."
+    ],
+    "steps": ["vepře", "toho vepře", "mi toho vepře", "nepřepepřete mi toho vepře", "Petře, nepřepepřete mi toho vepře", "Kmotře Petře, nepřepepřete mi toho vepře."]
+  },
+  {
+    "slug": "na-cvicisti",
+    "text": "Na cvičišti čtyři svišti piští.",
+    "translation": "On the training ground, four marmots squeak.",
+    "level": "Hard",
+    "trains": ["s, š, c and č", "ti said as ťi"],
+    "ipa": "na t͡svɪt͡ʃɪʃcɪ t͡ʃtɪr̝ɪ svɪʃcɪ pɪʃciː",
+    "about": "A workout for the hissing and hushing sounds: s, š, c and č, side by side.",
+    "tips": [
+      "Keep s and š apart: s with the tongue tip behind the teeth, š with the tongue drawn back and the lips rounded.",
+      "In cvičišti, svišti and piští, the ti is soft, like the t in tune in older British English.",
+      "Ř in čtyři sits between vowels, so it keeps its full buzz."
+    ],
+    "steps": ["piští", "svišti piští", "čtyři svišti piští", "Na cvičišti čtyři svišti piští."]
+  },
+  {
+    "slug": "tri-sta-tricet-tri",
+    "text": "Tři sta třicet tři stříbrných stříkaček stříkalo přes tři sta třicet tři stříbrných střech.",
+    "translation": "Three hundred and thirty-three silver fire hoses sprayed over three hundred and thirty-three silver roofs.",
+    "level": "Hard",
+    "trains": ["ř", "the stř cluster"],
+    "ipa": "tr̝̊ɪ sta tr̝̊ɪt͡sɛt tr̝̊ɪ str̝̊iːbr̩niːx str̝̊iːkat͡ʃɛk str̝̊iːkalo pr̝̊ɛs tr̝̊ɪ sta tr̝̊ɪt͡sɛt tr̝̊ɪ str̝̊iːbr̩niːx str̝̊ɛx",
+    "about": "The classic drill for ř, the sound most learners find hardest. Czechs use it to tease each other too.",
+    "tips": [
+      "Here ř always follows t or p, so it is the voiceless, hissing kind.",
+      "Get stř right on its own first: s, then t, then ř, with no vowel between.",
+      "Stříbrných has a syllabic r in the middle: stří-br-ných."
+    ],
+    "steps": ["střech", "stříbrných střech", "tři sta třicet tři stříbrných střech", "stříkalo přes tři sta třicet tři stříbrných střech", "Tři sta třicet tři stříbrných stříkaček stříkalo přes tři sta třicet tři stříbrných střech."]
+  },
+  {
+    "slug": "nenaolejuje-li",
+    "text": "Nenaolejuje-li je Julie, naolejuji je já.",
+    "translation": "If Julie doesn't oil them, I'll oil them myself.",
+    "level": "Very hard",
+    "trains": ["j between vowels", "keeping the flow"],
+    "ipa": "nɛnaolɛjujɛlɪ jɛ julɪjɛ naolɛjujɪ jɛ jaː",
+    "about": "No hard consonants at all, which is the trap: a long run of vowels, j and l where it is easy to lose count.",
+    "tips": [
+      "Nenaolejuje-li is one word of seven syllables: ne-na-o-le-ju-je-li.",
+      "Keep the air flowing; there is no stop anywhere until the comma.",
+      "Julie is said in three syllables: Ju-li-je."
+    ],
+    "steps": ["já", "je já", "naolejuji je já", "Julie, naolejuji je já", "je Julie, naolejuji je já", "Nenaolejuje-li je Julie, naolejuji je já."]
+  }
+]

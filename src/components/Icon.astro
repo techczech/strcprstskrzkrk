@@ -1,0 +1,15 @@
+---
+// Lucide icons (lucide-static), inlined at build time.
+import * as L from "lucide-static";
+const map = {
+  play: L.Play, pause: L.Pause, mic: L.Mic, stop: L.Square, search: L.Search, keyboard: L.Keyboard, x: L.X,
+  check: L.CircleCheck, right: L.ChevronRight, left: L.ChevronLeft, slow: L.Snail, sun: L.Sun, moon: L.Moon,
+  monitor: L.Monitor, up: L.ArrowUp, book: L.BookOpen, ear: L.Ear, tip: L.Lightbulb, again: L.RotateCcw,
+  wave: L.AudioLines, info: L.Info, steps: L.ListOrdered, lang: L.Languages, volume: L.Volume2,
+} as const;
+export type IconName = keyof typeof map;
+interface Props { name: IconName; class?: string }
+const { name, class: cls = "icon" } = Astro.props;
+const svg = map[name].replace("<svg", `<svg aria-hidden="true" focusable="false" class="${cls}"`);
+---
+<Fragment set:html={svg} />
