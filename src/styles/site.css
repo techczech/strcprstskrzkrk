@@ -171,17 +171,18 @@ section.block + section.block { border-top: 1px solid hsl(var(--border)); }
 .tw-hero .ipa { font-size: 1.15rem; margin: 0 0 1.4rem; display: flex; gap: .5rem; align-items: baseline; }
 .tw-hero .row { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; justify-content: space-between; margin-top: 1.4rem; }
 .tw-grid { display: grid; grid-template-columns: minmax(0, 1fr) 20rem; gap: 2.5rem; align-items: start; padding: 2.5rem 0 3rem; }
-@media (max-width: 60rem) { .tw-grid { grid-template-columns: 1fr; } }
+@media (max-width: 60rem) { .tw-grid { grid-template-columns: minmax(0, 1fr); } }
 .panel { background: hsl(var(--surface)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); }
 .panel-head { display: flex; align-items: center; gap: .6rem; padding: .9rem 1.25rem; border-bottom: 1px solid hsl(var(--border)); background: hsl(var(--sunk)); border-radius: var(--radius) var(--radius) 0 0; }
 .panel-head h2 { font: 650 1.1rem/1.2 var(--sans); margin: 0; }
+.panel-head { flex-wrap: wrap; }
 .panel-head p { margin: 0 0 0 auto; color: hsl(var(--muted)); font-size: .85rem; }
 .panel-body { padding: 1.25rem; }
 .panel + .panel { margin-top: 1.5rem; }
 
 /* Build-up ladder */
 .ladder { list-style: none; margin: 0; padding: 0; counter-reset: step; }
-.ladder li { display: grid; grid-template-columns: 2rem auto 1fr; gap: .9rem; align-items: center; padding: .85rem 1.25rem; border-top: 1px solid hsl(var(--border)); counter-increment: step; }
+.ladder li { display: grid; grid-template-columns: 2rem auto minmax(0, 1fr); gap: .9rem; align-items: center; padding: .85rem 1.25rem; border-top: 1px solid hsl(var(--border)); counter-increment: step; }
 .ladder li:first-child { border-top: 0; }
 .ladder li::before { content: counter(step); font: 700 .9rem/1 var(--sans); color: hsl(var(--muted)); text-align: center; }
 .ladder .cz { font-size: 1.3rem; line-height: 1.3; }
@@ -221,7 +222,7 @@ section.block + section.block { border-top: 1px solid hsl(var(--border)); }
 
 /* Sounds page */
 .sounds-grid { display: grid; grid-template-columns: 14rem minmax(0, 1fr); gap: 2.5rem; padding: 2.5rem 0 3rem; align-items: start; }
-@media (max-width: 52rem) { .sounds-grid { grid-template-columns: 1fr; } .toc { position: static !important; } }
+@media (max-width: 52rem) { .sounds-grid { grid-template-columns: minmax(0, 1fr); } .toc { position: static !important; } }
 .toc { position: sticky; top: calc(var(--head-h, 4.5rem) + 1rem); }
 .toc ol { list-style: none; padding: 0; margin: 0; display: grid; gap: .1rem; }
 .toc a { display: flex; gap: .6rem; align-items: baseline; padding: .4rem .6rem; border-radius: .5rem; text-decoration: none; color: hsl(var(--body)); }
@@ -292,7 +293,7 @@ section.block + section.block { border-top: 1px solid hsl(var(--border)); }
   .head-tools { margin-left: auto; }
   .tw-row { grid-template-columns: auto 1fr; }
   .tw-row .side { grid-column: 2; }
-  .ladder li { grid-template-columns: 1.25rem auto 1fr; gap: .6rem; padding-inline: .9rem; }
+  .ladder li { grid-template-columns: 1.25rem auto minmax(0, 1fr); gap: .6rem; padding-inline: .9rem; }
   .s-foot { display: none; }
 }
 @media (forced-colors: active) {
