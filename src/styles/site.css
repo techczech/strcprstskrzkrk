@@ -192,9 +192,9 @@ section.block + section.block { border-top: 1px solid hsl(var(--border)); }
 .ladder li.full::before { content: "★"; color: hsl(var(--accent)); }
 
 /* Recorder */
-.rec { display: grid; gap: 1rem; }
+.rec { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
 .rec label.target { display: grid; gap: .35rem; font-size: .9rem; color: hsl(var(--muted)); }
-.rec select { font: 500 1rem/1.3 var(--sans); padding: .6rem .7rem; border-radius: .6rem; border: 1px solid hsl(var(--border)); background: hsl(var(--surface)); color: hsl(var(--ink)); max-width: 100%; }
+.rec select { font: 500 1rem/1.3 var(--sans); padding: .6rem .7rem; border-radius: .6rem; border: 1px solid hsl(var(--border)); background: hsl(var(--surface)); color: hsl(var(--ink)); width: 100%; max-width: 100%; text-overflow: ellipsis; }
 .rec-main { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
 .rec-btn.is-recording { background: hsl(var(--accent)); border-color: hsl(var(--accent)); color: #fff; }
 .rec-status { font-size: .9rem; color: hsl(var(--muted)); min-height: 1.4em; margin: 0; }
