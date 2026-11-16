@@ -50,5 +50,7 @@ test("the sound key applies Czech voicing in context only", async () => {
   assert.ok(same("Smrž pln", "Smrš pln"), "ž before p devoices");
   assert.ok(same("z mlh", "zmlch"), "final h is ch; word breaks do not count");
   assert.ok(!same("plky", "blky"), "p before l stays voiceless");
+  assert.ok(same("od čaje", "ot čaje"), "d before č devoices");
+  assert.ok(same("z cukru", "s cukru"), "z before c devoices");
   assert.ok(!same("naolejuji", "naolejuje"), "vowels differ");
 });

@@ -111,7 +111,7 @@ export function soundKey(s) {
   for (let i = c.length - 1; i >= 0; i--) {
     const next = c[i + 1];
     if (next === undefined) { if (VOICED[c[i]]) c[i] = VOICED[c[i]]; continue; }
-    if (VOICED[c[i]] && VOICELESS[next]) c[i] = VOICED[c[i]];
+    if (VOICED[c[i]] && (VOICELESS[next] || next === "c" || next === "č")) c[i] = VOICED[c[i]];
     else if (VOICELESS[c[i]] && VOICED[next] && next !== "v") c[i] = VOICELESS[c[i]];
   }
   return c.join("");
@@ -185,11 +185,11 @@ async function main(cmd) {
       if (old && old.file !== file && existsSync(path.join(ROOT, "public", old.file))) await unlink(path.join(ROOT, "public", old.file));
       if (++done % 10 === 0) console.log(`  ${done}/${todo.length}`);
     });
-    for (const id of orphans) {
-      const f = path.join(ROOT, "public", m.clips[id].file);
-      if (existsSync(f)) await unlink(f);
-      delete m.clips[id];
-    }
+    // Drop orphans from the saved manifest first, then delete their files, so no saved entry ever points at a missing file.
+    const orphanFiles = orphans.map((id) => path.join(ROOT, "public", m.clips[id].file));
+    for (const id of orphans) delete m.clips[id];
+    await saveManifest(m);
+    for (const f of orphanFiles) if (existsSync(f)) await unlink(f);
     // Files on disk that the manifest no longer knows about (an interrupted run) go too.
     const known = new Set(Object.values(m.clips).map((v) => path.join(ROOT, "public", v.file)));
     for (const voice of existsSync(OUT) ? await readdir(OUT) : []) {
