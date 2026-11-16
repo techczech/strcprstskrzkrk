@@ -1,0 +1,116 @@
+---
+import Base from "../../layouts/Base.astro";
+import Cz from "../../components/Cz.astro";
+import Play from "../../components/Play.astro";
+import Icon from "../../components/Icon.astro";
+import { ordered, sounds, twisterUrl, levelClass, audioAttrs, firstAudio, type Twister } from "../../lib/content";
+
+export function getStaticPaths() {
+  return ordered.map((t, i) => ({ params: { slug: t.slug }, props: { t, i } }));
+}
+interface Props { t: Twister; i: number }
+const { t, i } = Astro.props;
+const prev = ordered[i - 1];
+const next = ordered[i + 1];
+const last = t.steps.length - 1;
+const fullClip = `tw/${t.slug}/${last}`;
+const related = sounds.filter((s) => s.twisters.includes(t.slug));
+/** The part of the full text before this step, shown faded so the reader sees where the step sits. */
+const ghostFor = (step: string) => {
+  const plain = t.text.replace(/[.]$/, "");
+  const s = step.replace(/[.]$/, "");
+  const at = plain.toLowerCase().lastIndexOf(s.toLowerCase());
+  if (at <= 0) return "";
+  // Only the last few words before the step, so long twisters do not bury the step in faded text.
+  const before = plain.slice(0, at).trimEnd().split(/\s+/);
+  return (before.length > 3 ? "… " + before.slice(-3).join(" ") : before.join(" ")) + " ";
+};
+const description = `${t.text} (“${t.translation}”): a Czech tongue twister with audio, IPA, tips and step-by-step practice.`;
+const jsonld = {
+  "@context": "https://schema.org", "@type": "LearningResource", name: t.text, inLanguage: "cs", description,
+  learningResourceType: "pronunciation exercise", educationalLevel: t.level, teaches: t.trains.join(", "),
+  url: new URL(twisterUrl(t), Astro.site).href, audio: firstAudio(fullClip) ? { "@type": "AudioObject", contentUrl: new URL(firstAudio(fullClip)!, Astro.site).href } : undefined,
+  author: { "@type": "Person", name: "Dominik Lukeš" },
+};
+---
+<Base title={t.text} description={description} nav="twister" jsonld={jsonld} md={`/twisters/${t.slug}.md`}>
+  <section class="tw-hero">
+    <div class="wrap">
+      <p class="crumbs"><a href="/#twisters">Tongue twisters</a> <Icon name="right" /> <span>{i + 1} of {ordered.length}</span> <span class={`pill ${levelClass(t.level)}`}>{t.level}</span></p>
+      <h1><Cz text={t.text} /></h1>
+      <p class="translation">“{t.translation}”</p>
+      <p class="ipa" lang="und-fonipa"><Icon name="ear" /> [{t.ipa}]</p>
+      <div class="row">
+        <div class="actions">
+          <a class="btn primary" href={firstAudio(fullClip)} data-play data-key-play {...audioAttrs(fullClip)}><Icon name="play" /> Play <kbd class="kbd-hint js-only">p</kbd></a>
+          <a class="btn" href={firstAudio(`tw/${t.slug}/slow`)} data-play data-key-slow {...audioAttrs(`tw/${t.slug}/slow`)}><Icon name="slow" /> Slowly <kbd class="kbd-hint js-only">l</kbd></a>
+        </div>
+        <ul class="legend" aria-label="What the colours mean">
+          <li><span class="cz"><span class="hacek">ř š č ž</span></span> letters with a háček</li>
+          <li><span class="cz"><span class="syl">r l</span></span> r or l as the vowel</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap tw-grid">
+    <div>
+      <section class="panel" aria-labelledby="ladder-h">
+        <div class="panel-head"><Icon name="steps" /><h2 id="ladder-h">Build it up from the end</h2><p>Listen, repeat, move down a line</p></div>
+        <ol class="ladder">
+          {t.steps.map((step, n) => (
+            <li class:list={{ full: n === last }}>
+              <Play clip={`tw/${t.slug}/${n}`} label={`Play: ${step}`} />
+              <Cz text={n === last ? step : step} ghost={n === last ? "" : ghostFor(step)} />
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="panel rec-panel" aria-labelledby="rec-h" data-recorder>
+        <div class="panel-head"><Icon name="mic" /><h2 id="rec-h">Record yourself</h2><p>Stays on your device</p></div>
+        <div class="panel-body rec">
+          <noscript><p>Recording needs JavaScript. You can still play each line and repeat it out loud.</p></noscript>
+          <label class="target js-only">What will you say?
+            <select data-rec-target>
+              {t.steps.map((step, n) => <option {...audioAttrs(`tw/${t.slug}/${n}`)} selected={n === last}>{n === last ? `The whole twister` : `Line ${n + 1}: ${step}`}</option>)}
+            </select>
+          </label>
+          <div class="rec-main js-only">
+            <button type="button" class="btn rec-btn" data-rec-toggle aria-pressed="false"><span class="dot" aria-hidden="true"></span> <span class="label">Record yourself</span> <kbd class="kbd-hint">r</kbd></button>
+          </div>
+          <p class="rec-status js-only" aria-live="polite">Press record, say the line, then press again to stop.</p>
+          <div class="rec-result" hidden>
+            <button type="button" class="btn" data-rec-compare><Icon name="wave" /> Model, then you</button>
+            <button type="button" class="btn ghost" data-rec-mine><Icon name="play" /> You</button>
+            <button type="button" class="btn ghost" data-rec-model><Icon name="volume" /> Model</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="side-col">
+      <section class="panel" aria-labelledby="tips-h">
+        <div class="panel-head"><Icon name="tip" /><h2 id="tips-h">How to say it</h2></div>
+        <div class="panel-body">
+          <p>{t.about}</p>
+          <ul class="tips">{t.tips.map((tip) => <li>{tip}</li>)}</ul>
+          {related.length > 0 && <div><h3>Sounds in this twister</h3><ul class="chips">{related.map((s) => <li><a href={`/sounds/#${s.slug}`}><span lang="cs">{s.letters.split(" · ")[0]}</span>: {s.name}</a></li>)}</ul></div>}
+        </div>
+      </section>
+      <section class="panel js-only" aria-labelledby="done-h">
+        <div class="panel-head"><Icon name="check" /><h2 id="done-h">Your practice</h2></div>
+        <div class="panel-body">
+          <p class="progress-line" data-done-status>Not marked as practised yet.</p>
+          <button type="button" class="btn" data-mark-done={t.slug}><Icon name="check" /> I practised this</button>
+          <p class="progress-line">Kept in this browser only.</p>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <nav class="wrap pager" aria-label="More twisters">
+    {prev && <a class="prev" href={twisterUrl(prev)} data-key-prev><small><Icon name="left" /> Previous <kbd class="js-only">b</kbd></small><Cz text={prev.text} /></a>}
+    {next && <a class="next" href={twisterUrl(next)} data-key-next><small>Next <kbd class="js-only">n</kbd> <Icon name="right" /></small><Cz text={next.text} /></a>}
+  </nav>
+</Base>

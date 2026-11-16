@@ -1,0 +1,9 @@
+---
+// Plays one clip in the reader's chosen voice. Without JavaScript it is a plain link to the MP3.
+import Icon from "./Icon.astro";
+import { audioAttrs, firstAudio } from "../lib/content";
+interface Props { clip: string; label: string; size?: "big" | "" }
+const { clip, label, size = "" } = Astro.props;
+const href = firstAudio(clip);
+---
+{href && <a class:list={["play", size]} href={href} data-play {...audioAttrs(clip)} aria-label={label} title={label}><span class="i-play"><Icon name="play" /></span><span class="i-pause"><Icon name="pause" /></span></a>}

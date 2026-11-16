@@ -1,0 +1,48 @@
+---
+import Base from "../layouts/Base.astro";
+import Cz from "../components/Cz.astro";
+import Play from "../components/Play.astro";
+import Icon from "../components/Icon.astro";
+import { sounds, twisters, twisterUrl, slugify } from "../lib/content";
+const exampleKey = (slug: string, examples: { word: string }[], i: number) => {
+  // Same keys as scripts/audio.mjs: a repeated slug gets -2.
+  const seen = new Set<string>();
+  let k = "";
+  for (let j = 0; j <= i; j++) { k = slugify(examples[j].word); while (seen.has(k)) k += "-2"; seen.add(k); }
+  return `snd/${slug}/${k}`;
+};
+---
+<Base title="The hard Czech sounds" description="The Czech sounds learners find hardest, ř, š, č, ž, syllabic r and l, ch, h, the soft consonants, ě and long vowels, each with audio examples." nav="sounds">
+  <div class="wrap sounds-grid">
+    <nav class="toc" aria-label="Sounds on this page">
+      <ol>{sounds.map((s) => <li><a href={`#${s.slug}`}><span class="l" lang="cs">{s.letters.split(" · ")[0]}</span><span>{s.name}</span></a></li>)}</ol>
+    </nav>
+    <div>
+      <h1 class="visually-hidden">The hard Czech sounds</h1>
+      {sounds.map((s) => (
+        <section class="sound" id={s.slug} aria-labelledby={`${s.slug}-h`}>
+          <div class="sound-head"><h2 id={`${s.slug}-h`} lang="cs">{s.letters}</h2><span class="ipa" lang="und-fonipa">[{s.ipa}]</span></div>
+          <p>{s.description}</p>
+          <ul class="examples">
+            {s.examples.map((e, i) => (
+              <li><Play clip={exampleKey(s.slug, s.examples, i)} label={`Play: ${e.word}`} /><Cz text={e.word} /><small>{e.gloss}</small></li>
+            ))}
+          </ul>
+          <p class="callout"><Icon name="tip" /><span>{s.tip}</span></p>
+          {s.twisters.length > 0 && <p>Practise it in: {s.twisters.map((slug, i) => { const t = twisters.find((x) => x.slug === slug)!; return <>{i > 0 && " · "}<a href={twisterUrl(t)} lang="cs">{t.text.replace(/[.]$/, "")}</a></>; })}</p>}
+        </section>
+      ))}
+    </div>
+  </div>
+  <script>
+    // Table-of-contents spy: marks the section in view.
+    const links = new Map(Array.from(document.querySelectorAll<HTMLAnchorElement>(".toc a")).map((a) => [a.hash.slice(1), a]));
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) {
+        links.forEach((a) => a.removeAttribute("aria-current"));
+        links.get(e.target.id)?.setAttribute("aria-current", "location");
+      }
+    }, { rootMargin: "-30% 0px -60% 0px" });
+    document.querySelectorAll(".sound").forEach((s) => io.observe(s));
+  </script>
+</Base>

@@ -3,16 +3,32 @@
     "slug": "r-hacek",
     "letters": "Ř ř",
     "ipa": "r̝  ·  r̝̊",
-    "name": "ř",
+    "name": "the famous one",
     "description": "The sound Czech is famous for. The tongue tip vibrates as for a rolled r, but the tongue is raised and tense, so you also hear a buzz like the s in pleasure. It is one sound, not r followed by zh.",
     "tip": "Start from a strong rolled r and raise the front of your tongue until it buzzes. After p, t and k, and at the end of a word, ř loses its voice and hisses.",
     "examples": [
-      { "word": "tři", "gloss": "three" },
-      { "word": "řeka", "gloss": "river" },
-      { "word": "moře", "gloss": "sea" },
-      { "word": "Dvořák", "gloss": "the composer's surname" }
+      {
+        "word": "tři",
+        "gloss": "three"
+      },
+      {
+        "word": "řeka",
+        "gloss": "river"
+      },
+      {
+        "word": "moře",
+        "gloss": "sea"
+      },
+      {
+        "word": "Dvořák",
+        "gloss": "the composer's surname"
+      }
     ],
-    "twisters": ["tri-sta-tricet-tri", "kmotre-petre", "na-cvicisti"]
+    "twisters": [
+      "tri-sta-tricet-tri",
+      "kmotre-petre",
+      "na-cvicisti"
+    ]
   },
   {
     "slug": "syllabic-r-l",
@@ -22,96 +38,182 @@
     "description": "Between two consonants, r and l can carry a syllable on their own. That is why Czech has words with no vowel letters.",
     "tip": "Do not add a vowel before the r or l. Hold the r or l for the length of a short vowel instead.",
     "examples": [
-      { "word": "krk", "gloss": "neck" },
-      { "word": "prst", "gloss": "finger" },
-      { "word": "vlk", "gloss": "wolf" },
-      { "word": "mlha", "gloss": "mist" }
+      {
+        "word": "krk",
+        "gloss": "neck"
+      },
+      {
+        "word": "prst",
+        "gloss": "finger"
+      },
+      {
+        "word": "vlk",
+        "gloss": "wolf"
+      },
+      {
+        "word": "mlha",
+        "gloss": "mist"
+      }
     ],
-    "twisters": ["strc-prst-skrz-krk", "smrz-pln-skvrn", "vlky-plky"]
+    "twisters": [
+      "strc-prst-skrz-krk",
+      "smrz-pln-skvrn",
+      "vlky-plky"
+    ]
   },
   {
     "slug": "s-hacek",
     "letters": "Š š",
     "ipa": "ʃ",
-    "name": "š",
+    "name": "sh as in shoe",
     "description": "Like sh in shoe.",
     "tip": "Round the lips a little and draw the tongue back from the teeth.",
     "examples": [
-      { "word": "šest", "gloss": "six" },
-      { "word": "myš", "gloss": "mouse" },
-      { "word": "pštros", "gloss": "ostrich" }
+      {
+        "word": "šest",
+        "gloss": "six"
+      },
+      {
+        "word": "myš",
+        "gloss": "mouse"
+      },
+      {
+        "word": "pštros",
+        "gloss": "ostrich"
+      }
     ],
-    "twisters": ["sel-pstros", "na-cvicisti"]
+    "twisters": [
+      "sel-pstros",
+      "na-cvicisti"
+    ]
   },
   {
     "slug": "c-hacek",
     "letters": "Č č",
     "ipa": "t͡ʃ",
-    "name": "č",
+    "name": "ch as in chat",
     "description": "Like ch in chat.",
     "tip": "It is t and š said as one sound.",
     "examples": [
-      { "word": "čaj", "gloss": "tea" },
-      { "word": "čtyři", "gloss": "four" },
-      { "word": "oči", "gloss": "eyes" }
+      {
+        "word": "čaj",
+        "gloss": "tea"
+      },
+      {
+        "word": "čtyři",
+        "gloss": "four"
+      },
+      {
+        "word": "oči",
+        "gloss": "eyes"
+      }
     ],
-    "twisters": ["na-cvicisti", "sel-pstros"]
+    "twisters": [
+      "na-cvicisti",
+      "sel-pstros"
+    ]
   },
   {
     "slug": "z-hacek",
     "letters": "Ž ž",
     "ipa": "ʒ",
-    "name": "ž",
+    "name": "s as in pleasure",
     "description": "Like the s in pleasure, or the j in French bonjour.",
     "tip": "At the end of a word it loses its voice and sounds like š.",
     "examples": [
-      { "word": "žena", "gloss": "woman" },
-      { "word": "život", "gloss": "life" },
-      { "word": "může", "gloss": "can" }
+      {
+        "word": "žena",
+        "gloss": "woman"
+      },
+      {
+        "word": "život",
+        "gloss": "life"
+      },
+      {
+        "word": "může",
+        "gloss": "can"
+      }
     ],
-    "twisters": ["smrz-pln-skvrn"]
+    "twisters": [
+      "smrz-pln-skvrn"
+    ]
   },
   {
     "slug": "c",
     "letters": "C c",
     "ipa": "t͡s",
-    "name": "c",
+    "name": "ts as in cats",
     "description": "Always ts, as at the end of cats, even at the start of a word. Never k, never s.",
     "tip": "Say cats, then drop the ca.",
     "examples": [
-      { "word": "cukr", "gloss": "sugar" },
-      { "word": "co", "gloss": "what" },
-      { "word": "cvičiště", "gloss": "training ground" }
+      {
+        "word": "cukr",
+        "gloss": "sugar"
+      },
+      {
+        "word": "co",
+        "gloss": "what"
+      },
+      {
+        "word": "cvičiště",
+        "gloss": "training ground"
+      }
     ],
-    "twisters": ["na-cvicisti", "sel-pstros"]
+    "twisters": [
+      "na-cvicisti",
+      "sel-pstros"
+    ]
   },
   {
     "slug": "ch",
     "letters": "Ch ch",
     "ipa": "x",
-    "name": "ch",
+    "name": "ch as in loch",
     "description": "The sound in Scottish loch or German Bach. Czech treats ch as a single letter, and it comes after h in the alphabet.",
     "tip": "Make a k, then let air hiss through the gap instead of closing it.",
     "examples": [
-      { "word": "chléb", "gloss": "bread" },
-      { "word": "ucho", "gloss": "ear" },
-      { "word": "střecha", "gloss": "roof" }
+      {
+        "word": "chléb",
+        "gloss": "bread"
+      },
+      {
+        "word": "ucho",
+        "gloss": "ear"
+      },
+      {
+        "word": "střecha",
+        "gloss": "roof"
+      }
     ],
-    "twisters": ["tri-sta-tricet-tri"]
+    "twisters": [
+      "tri-sta-tricet-tri"
+    ]
   },
   {
     "slug": "h",
     "letters": "H h",
     "ipa": "ɦ",
-    "name": "h",
+    "name": "a voiced h",
     "description": "A voiced, breathy h, deeper than English h. It is never silent.",
     "tip": "At the end of a word it turns into ch: mlh ends in the ch sound.",
     "examples": [
-      { "word": "hora", "gloss": "mountain" },
-      { "word": "Praha", "gloss": "Prague" },
-      { "word": "toho", "gloss": "of that" }
+      {
+        "word": "hora",
+        "gloss": "mountain"
+      },
+      {
+        "word": "Praha",
+        "gloss": "Prague"
+      },
+      {
+        "word": "toho",
+        "gloss": "of that"
+      }
     ],
-    "twisters": ["smrz-pln-skvrn", "kmotre-petre"]
+    "twisters": [
+      "smrz-pln-skvrn",
+      "kmotre-petre"
+    ]
   },
   {
     "slug": "soft-consonants",
@@ -121,11 +223,22 @@
     "description": "Soft consonants, made with the middle of the tongue against the roof of the mouth. Ň is like the ni in onion. Before i, í and ě, plain d, t and n are soft too.",
     "tip": "Ti in svišti is the same sound as ť: the t softens before i.",
     "examples": [
-      { "word": "kůň", "gloss": "horse" },
-      { "word": "děti", "gloss": "children" },
-      { "word": "ťukat", "gloss": "to tap" }
+      {
+        "word": "kůň",
+        "gloss": "horse"
+      },
+      {
+        "word": "děti",
+        "gloss": "children"
+      },
+      {
+        "word": "ťukat",
+        "gloss": "to tap"
+      }
     ],
-    "twisters": ["na-cvicisti"]
+    "twisters": [
+      "na-cvicisti"
+    ]
   },
   {
     "slug": "e-hacek",
@@ -135,9 +248,18 @@
     "description": "Not a vowel of its own. It is e that changes the consonant before it: bě, pě, vě, fě sound like bje, pje, vje, fje; dě, tě, ně sound like ďe, ťe, ňe; mě sounds like mňe.",
     "tip": "Read the consonant and ě together as one unit.",
     "examples": [
-      { "word": "pět", "gloss": "five" },
-      { "word": "děkuji", "gloss": "thank you" },
-      { "word": "město", "gloss": "town" }
+      {
+        "word": "pět",
+        "gloss": "five"
+      },
+      {
+        "word": "děkuji",
+        "gloss": "thank you"
+      },
+      {
+        "word": "město",
+        "gloss": "town"
+      }
     ],
     "twisters": []
   },
@@ -149,10 +271,22 @@
     "description": "The accent mark shows a long vowel, not stress. Length can change the meaning of a word. Í and ý sound the same, as do ú and ů.",
     "tip": "Stress always falls on the first syllable, whether it is long or short.",
     "examples": [
-      { "word": "byt", "gloss": "flat" },
-      { "word": "být", "gloss": "to be" },
-      { "word": "dům", "gloss": "house" }
+      {
+        "word": "byt",
+        "gloss": "flat"
+      },
+      {
+        "word": "být",
+        "gloss": "to be"
+      },
+      {
+        "word": "dům",
+        "gloss": "house"
+      }
     ],
-    "twisters": ["sel-pstros", "nenaolejuje-li"]
+    "twisters": [
+      "sel-pstros",
+      "nenaolejuje-li"
+    ]
   }
 ]

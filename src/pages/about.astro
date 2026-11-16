@@ -1,0 +1,20 @@
+---
+import Base from "../layouts/Base.astro";
+import { twisters } from "../lib/content";
+import manifest from "../data/audio-manifest.json";
+const voices = Object.values(manifest.voices).join(" and ");
+---
+<Base title="About" description="About Strč prst skrz krk: what the site is for, how to practise with it and how its audio is made." nav="about">
+  <article class="wrap prose">
+    <h1>About this site</h1>
+    <p>Strč prst skrz krk is a small collection of Czech tongue twisters for learners of Czech and anyone curious about how Czech sounds. It was conceived and designed by <a href="https://dominiklukes.net/">Dominik Lukeš</a>.</p>
+    <h2>How to practise</h2>
+    <p>Each of the {twisters.length} twisters has its own page. Listen to the whole line first, at normal speed and slowly. Then work down the list under <em>Build it up from the end</em>: each line adds a few words to the front of the last one, so you always finish on words you have already said. This is called back-chaining, and it keeps the hard start of a long line from tripping up everything after it.</p>
+    <p>When you can say the whole twister, record yourself and play the model followed by your recording. Your recording stays in your browser tab; it is not uploaded or saved.</p>
+    <h2>How the audio is made</h2>
+    <p>Every clip is synthetic speech in two voices, {voices}, made once with OpenAI’s text-to-speech when the site is built. Each clip was then transcribed back with Czech speech recognition to check that it says what it should. Nothing on this site calls an AI service while you use it.</p>
+    <p>Synthetic voices are good but not perfect on lines with no vowels at all. If a clip sounds wrong to you, trust the spelling and the tips.</p>
+    <h2>Privacy</h2>
+    <p>The site has no accounts, cookies or analytics. Your voice choice, theme and the twisters you mark as practised are kept in your own browser.</p>
+  </article>
+</Base>

@@ -1,62 +1,43 @@
-# Strč prst skrz krk - Czech Tongue Twister App
+# Strč prst skrz krk
 
-A fun, interactive web application designed to help users master difficult Czech pronunciation through gamified tongue twisters.
+Czech tongue twisters with audio, at https://strcprstskrzkrk.com. A static Astro site: no server code, no accounts, and no API calls from the browser.
 
-## 🏗 Architecture
+## Content
 
-The application is built as a Single Page Application (SPA) using React and TypeScript. It leverages modern web standards and AI services to provide immediate feedback and practice tools.
+- `src/data/twisters.json`: the twisters (text, translation, level, IPA, notes, tips, back-chaining steps; the last step is the whole twister).
+- `src/data/sounds.json`: the sounds guide, with example words.
+- Edit these files to change the content. Everything on the site is generated from them.
 
-### Core Stack
-- **Frontend Framework**: React 19 (via ESM imports)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS (via CDN)
-- **Audio Processing**: Native Web Audio API (`AudioContext`, `AnalyserNode`)
-- **AI Integration**: Google GenAI SDK (`@google/genai`) using Gemini 2.5 Flash for Text-to-Speech generation.
+## Audio
 
-### Key Components
+All audio is synthetic speech made at build time with OpenAI text-to-speech (`gpt-4o-mini-tts-2025-12-15`, voices Marin and Cedar) and committed under `public/audio/`. `src/data/audio-manifest.json` maps each clip to its file and records what Czech speech recognition heard when the clip was transcribed back.
 
-1.  **View Layer**:
-    -   `App.tsx`: Main entry point, handles routing (simple state-based), hero section, and the main list of twisters.
-    -   `PracticeMode.tsx`: A modal overlay that guides the user through the "back-chaining" learning method (breaking phrases into smaller chunks).
-    -   `AudioPlayer.tsx`: A reusable component utilizing `Canvas API` to visualize audio frequency data while playing.
+```sh
+npm run audio:status     # what would change; no key needed
+npm run audio:generate   # make clips for new or changed text only, remove orphans
+npm run audio:check      # list clips that did not transcribe back exactly
+```
 
-2.  **Data Layer**:
-    -   `constants.ts`: Contains the static database of tongue twisters, linguistic breakdowns, and translations.
-    -   `types.ts`: TypeScript interfaces ensuring type safety across the domain models (TwisterContent, Progress, ViewModels).
+A clip is regenerated only when its text, voice, model or speaking instructions change (hash in the file name). Generation retries up to three times when the transcription does not match and keeps the closest take; `node scripts/audio.mjs generate --retry-flagged` tries harder on the flagged ones.
 
-3.  **Services**:
-    -   `geminiService.ts`: Handles communication with the Google Gemini API. It generates audio for specific word chunks dynamically if static audio isn't available, caching results in `localStorage` to reduce API calls.
-    -   `audioService.ts`: Utilities for fetching and decoding static MP3 assets.
-    -   `storageService.ts`: Simple persistence layer using `localStorage` to track user completion statistics.
+The key: `scripts/with-openai-key.sh` hands the OpenAI key from Bitwarden Secrets Manager (secret `OPENAI-VOICETESTING-PRIVATE`, project `agentdev`) to that one command as `OPENAI_API_KEY`. It is never written to disk, the repo or the site.
 
-### Audio Pipeline
-The app uses a hybrid audio approach:
-- **Static Assets**: High-quality, human-recorded full sentences are loaded from static paths.
-- **Dynamic AI Generation**: Intermediate practice steps (individual words or partial phrases) are generated on-the-fly using Gemini's TTS capabilities (`gemini-2.5-flash-preview-tts`).
-- **User Recording**: Uses `navigator.mediaDevices.getUserMedia` to record user attempts, which are immediately decoded into an `AudioBuffer` for instant playback and comparison.
+## Develop and deploy
 
-## 🚀 Deployment
+```sh
+npm install
+npm run dev
+npm run build && npm test
+node scripts/screens.mjs docs/design/screens   # screenshots for review
+```
 
-### Prerequisites
-- A Google Cloud Project with the Gemini API enabled.
-- An API Key with access to the `gemini-2.5-flash-preview-tts` model.
+Hosting: Cloudflare Pages project `strcprstskrzkrk`, direct upload of `dist/`, custom domain `strcprstskrzkrk.com`:
 
-### Environment Configuration
-The application expects the API key to be available via `process.env.API_KEY`. 
-- **Development/AI Studio**: This is injected automatically.
-- **Production (Vite/Webpack)**: You must configure your bundler to replace `process.env.API_KEY` with your actual key. Note that purely client-side API keys should be restricted by HTTP Referrer in the Google Cloud Console to prevent misuse.
+```sh
+python3 <bws-skill>/scripts/bws_manager.py run --secret-id <CLOUDFLARE_API_TOKEN id> --as CLOUDFLARE_API_TOKEN -- \
+  npx wrangler pages deploy dist --project-name strcprstskrzkrk --branch main
+```
 
-### Running Locally
-This project uses a browser-native ES Module approach via `importmap` in `index.html`.
+Fonts: Fraunces and Inter (fontsource, OFL); IPA in a Latin-plus-IPA subset of Charis 7 by SIL (`public/fonts/`, OFL).
 
-To serve locally:
-1.  Clone the repository.
-2.  Serve the root directory using a static file server (e.g., `npx http-server .`).
-3.  Open the local server URL.
-
-### Deployment Targets
-The app is static and can be deployed to:
-- GitHub Pages
-- Vercel
-- Netlify
-- Firebase Hosting
+The previous version (Google AI Studio app on Cloud Run with live Gemini speech) is in Git history before the `astro-rebuild` branch.

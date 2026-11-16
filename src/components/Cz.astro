@@ -1,0 +1,9 @@
+---
+// Czech text with ř, š, č, ž and syllabic r/l marked. ghost: a leading part shown faded (the build-up ladder).
+import { marks } from "../lib/content";
+interface Props { text: string; ghost?: string; class?: string; tag?: string }
+const { text, ghost = "", class: cls = "", tag: Tag = "span" } = Astro.props;
+const lead = ghost ? marks(ghost) : [];
+const main = marks(text);
+---
+<Tag class:list={["cz", cls]} lang="cs">{lead.length > 0 && <span class="ghost">{lead.map((p) => p.k ? <span class={p.k}>{p.t}</span> : p.t)}</span>}{main.map((p) => p.k ? <span class={p.k}>{p.t}</span> : p.t)}</Tag>

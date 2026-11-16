@@ -1,0 +1,95 @@
+---
+import "@fontsource-variable/fraunces/wght.css";
+import "@fontsource-variable/inter/wght.css";
+import "../styles/kit/dialog.css";
+import "../styles/site.css";
+import Icon from "../components/Icon.astro";
+import VoiceSwitch from "../components/VoiceSwitch.astro";
+import { themePrepaint } from "../scripts/kit/theme";
+import { keyGroups, keyMap } from "../lib/keys";
+
+interface Props { title: string; description: string; nav?: "home" | "sounds" | "about" | "twister"; jsonld?: object; md?: string }
+const { title, description, nav, jsonld, md } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const fullTitle = title.includes("Strč prst skrz krk") ? title : `${title} · Strč prst skrz krk`;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script is:inline set:html={themePrepaint()} />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta name="color-scheme" content="light dark" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:locale" content="en_GB" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="Text version for agents" />
+  {md && <link rel="alternate" type="text/markdown" href={md} />}
+  {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Strč prst skrz krk, home">Str<span class="h">č</span>&nbsp;prst skrz krk</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/#twisters" aria-current={nav === "twister" ? "page" : undefined}>Twisters</a>
+        <a href="/sounds/" aria-current={nav === "sounds" ? "page" : undefined}>Sounds</a>
+        <a href="/about/" aria-current={nav === "about" ? "page" : undefined}>About</a>
+      </nav>
+      <div class="head-tools">
+        <VoiceSwitch />
+        <a class="icon-btn" href="/search/" data-open-search aria-label="Search (/ or Ctrl+K)" title="Search ( / )"><Icon name="search" /></a>
+      </div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><slot /></main>
+  <footer class="site-foot">
+    <div class="wrap">
+      <div>
+        <p>Conceived and designed by <a href="https://dominiklukes.net/">Dominik Lukeš</a>.</p>
+        <p>All audio is synthetic speech, made once when the site is built. Nothing you do here is sent anywhere.</p>
+      </div>
+      <div class="foot-tools">
+        <div class="seg js-only" role="group" aria-label="Theme">
+          <button type="button" data-theme-set="system" aria-pressed="true"><Icon name="monitor" /><span class="visually-hidden">System theme</span></button>
+          <button type="button" data-theme-set="light" aria-pressed="false"><Icon name="sun" /><span class="visually-hidden">Light theme</span></button>
+          <button type="button" data-theme-set="dark" aria-pressed="false"><Icon name="moon" /><span class="visually-hidden">Dark theme</span></button>
+        </div>
+        <button type="button" class="btn small ghost js-only" data-open-keys><Icon name="keyboard" /> Shortcuts <kbd>?</kbd></button>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="kit-dlg dlg" id="search-dlg" aria-label="Search">
+    <div class="s-head">
+      <div class="s-field"><Icon name="search" /><input type="search" placeholder="Search twisters and sounds…" aria-label="Search twisters and sounds" role="combobox" aria-expanded="true" aria-controls="s-results" autocomplete="off" spellcheck="false" />
+        <button type="button" class="icon-btn s-clear" aria-label="Clear search" hidden><Icon name="x" /></button></div>
+      <p class="s-meta"></p>
+    </div>
+    <div class="s-body" id="s-results" role="listbox" aria-label="Results"></div>
+    <div class="s-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span><kbd>Esc</kbd> close</span><span style="margin-left:auto">Index for agents: <a href="/search-index.json">/search-index.json</a></span></div>
+  </dialog>
+  <dialog class="kit-dlg dlg" id="keys-dlg" data-keys={JSON.stringify(keyMap())} aria-labelledby="keys-title"><div class="k-body">
+    <button type="button" class="icon-btn dlg-x" data-close aria-label="Close"><Icon name="x" /></button>
+    <h2 id="keys-title"><Icon name="keyboard" /> Keyboard shortcuts</h2>
+    <div class="k-switch"><label><input type="checkbox" data-single-keys checked /> Single-key shortcuts</label>
+      <small>Turn these off if you use speech input or stray key presses get in the way. <kbd>Ctrl</kbd>+<kbd>K</kbd> (<kbd>⌘K</kbd> on a Mac) and <kbd>Esc</kbd> keep working, and this list stays in the footer.</small></div>
+    <div class="k-rows">
+      {keyGroups.map(([g, rows]) => (<><h3>{g}</h3>{rows.map((r) => <div class="k-row"><span>{r.label}</span><kbd>{r.key}</kbd></div>)}</>))}
+    </div>
+  </div></dialog>
+  <button type="button" class="icon-btn fab-top js-only" aria-label="Back to top"><Icon name="up" /></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    import { initSite } from "../scripts/site";
+    initSite();
+  </script>
+</body>
+</html>

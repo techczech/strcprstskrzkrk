@@ -1,0 +1,54 @@
+---
+import Base from "../layouts/Base.astro";
+import Cz from "../components/Cz.astro";
+import Play from "../components/Play.astro";
+import Icon from "../components/Icon.astro";
+import { ordered, sounds, twisterUrl, levelClass, audioAttrs, firstAudio, SITE_DESCRIPTION } from "../lib/content";
+const title = ordered[0];
+const jsonld = { "@context": "https://schema.org", "@type": "WebSite", name: "Strč prst skrz krk", url: "https://strcprstskrzkrk.com/", description: SITE_DESCRIPTION, inLanguage: "en", author: { "@type": "Person", name: "Dominik Lukeš", url: "https://dominiklukes.net/" } };
+---
+<Base title="Strč prst skrz krk · Czech tongue twisters with audio" description={SITE_DESCRIPTION} nav="home" jsonld={jsonld}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Czech tongue twisters, with audio</p>
+      <h1><Cz text={title.text} /></h1>
+      <p class="translation">“{title.translation}”</p>
+      <p class="ipa" lang="und-fonipa">[{title.ipa}]</p>
+      <div class="actions">
+        <a class="btn" href={firstAudio(`tw/${title.slug}/${title.steps.length - 1}`)} data-play {...audioAttrs(`tw/${title.slug}/${title.steps.length - 1}`)}><Icon name="play" /> Listen</a>
+        <a class="btn" href={firstAudio(`tw/${title.slug}/slow`)} data-play {...audioAttrs(`tw/${title.slug}/slow`)}><Icon name="slow" /> Slowly</a>
+        <a class="btn primary" href={twisterUrl(title)}>Practise it step by step <Icon name="right" /></a>
+      </div>
+      <p class="lead">Listen to each twister, build it up a few words at a time from the end, then record yourself and compare. Letters in <span class="cz"><span class="hacek">red</span></span> have a háček; an <span class="cz"><span class="syl">underlined</span></span> r or l carries the syllable on its own.</p>
+    </div>
+  </section>
+
+  <section class="block" id="twisters">
+    <div class="wrap">
+      <div class="block-head"><h2>Tongue twisters</h2><p>{ordered.length} twisters, from easy to very hard</p></div>
+      <ol class="tw-list">
+        {ordered.map((t) => (
+          <li class="tw-row">
+            <Play clip={`tw/${t.slug}/${t.steps.length - 1}`} label={`Play: ${t.text}`} />
+            <div>
+              <a class="tw-link" href={twisterUrl(t)}><Cz text={t.text} /></a>
+              <div class="meta"><span class={`pill ${levelClass(t.level)}`}>{t.level}</span><span class="translation">{t.translation}</span></div>
+            </div>
+            <div class="side"><span class="done-badge" data-done-badge={t.slug} hidden><Icon name="check" /> Practised</span><span class="chev"><Icon name="right" /></span></div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head"><h2>The hard sounds</h2><p><a href="/sounds/">All sounds with examples</a></p></div>
+      <ul class="tiles">
+        {sounds.map((s) => (
+          <li><a class="tile" href={`/sounds/#${s.slug}`}><span class="letters" lang="cs">{s.letters}</span><span class="ipa">[{s.ipa}]</span><span class="name">{s.name}</span></a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Base>

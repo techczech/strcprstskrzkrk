@@ -47,3 +47,14 @@ export function marks(text: string): Part[] {
 }
 
 export const levelClass = (l: string) => `lvl-${slugify(l)}`;
+
+const ORDER = ["Easy", "Medium", "Hard", "Very hard"];
+/** Display order: the title twister first, then easiest to hardest. */
+export const ordered: Twister[] = [
+  twisters[0],
+  ...twisters.slice(1).sort((a, b) => ORDER.indexOf(a.level) - ORDER.indexOf(b.level)),
+];
+export const twisterUrl = (t: Twister) => `/twisters/${t.slug}/`;
+export const soundBySlug = (slug: string) => sounds.find((s) => s.slug === slug);
+export const SITE_DESCRIPTION =
+  "Czech tongue twisters with audio you can play, slow down and practise step by step, plus a guide to the hardest Czech sounds.";

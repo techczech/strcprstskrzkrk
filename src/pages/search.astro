@@ -1,0 +1,15 @@
+---
+import Base from "../layouts/Base.astro";
+import { ordered, sounds, twisterUrl } from "../lib/content";
+---
+<Base title="Search" description="Search the tongue twisters and sounds.">
+  <article class="wrap prose">
+    <h1>Search</h1>
+    <p class="no-js-only">Search needs JavaScript. Here is everything on the site instead.</p>
+    <p class="js-only">Search opens over this page. Press <kbd>/</kbd> to open it again.</p>
+    <h2>Tongue twisters</h2>
+    <ul>{ordered.map((t) => <li><a href={twisterUrl(t)} lang="cs">{t.text}</a> · {t.translation}</li>)}</ul>
+    <h2>Sounds</h2>
+    <ul>{sounds.map((s) => <li><a href={`/sounds/#${s.slug}`}>{s.letters}</a> · {s.name}</li>)}</ul>
+  </article>
+</Base>

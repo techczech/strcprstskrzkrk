@@ -1,0 +1,8 @@
+---
+import { VOICES } from "../lib/content";
+const ids = Object.keys(VOICES);
+---
+<div class="seg js-only" role="group" aria-label="Voice">
+  <span class="lbl">Voice</span>
+  {ids.map((v, i) => <button type="button" data-voice-set={v} aria-pressed={i === 0 ? "true" : "false"}>{VOICES[v]}</button>)}
+</div>
