@@ -6,7 +6,7 @@
   },
   "clips": {
     "cedar|snd/c-hacek/caj": {
-      "file": "audio/cedar/snd--c-hacek--caj-5a9b1fd8353f.mp3",
+      "file": "audio/cedar/snd--c-hacek--caj-5a9b1fd8353f-86c80447.mp3",
       "hash": "5a9b1fd8353f",
       "text": "čaj",
       "style": "normal",
@@ -17,7 +17,7 @@
       }
     },
     "cedar|snd/c-hacek/ctyri": {
-      "file": "audio/cedar/snd--c-hacek--ctyri-8a331dcbaabb.mp3",
+      "file": "audio/cedar/snd--c-hacek--ctyri-8a331dcbaabb-9ee316df.mp3",
       "hash": "8a331dcbaabb",
       "text": "čtyři",
       "style": "normal",
@@ -28,7 +28,7 @@
       }
     },
     "cedar|snd/c-hacek/oci": {
-      "file": "audio/cedar/snd--c-hacek--oci-0cbc0ec668dc.mp3",
+      "file": "audio/cedar/snd--c-hacek--oci-0cbc0ec668dc-5c5ed196.mp3",
       "hash": "0cbc0ec668dc",
       "text": "oči",
       "style": "normal",
@@ -39,29 +39,29 @@
       }
     },
     "cedar|snd/c/co": {
-      "file": "audio/cedar/snd--c--co-8cf87f4470d0.mp3",
+      "file": "audio/cedar/snd--c--co-8cf87f4470d0-4698e010.mp3",
       "hash": "8cf87f4470d0",
       "text": "co",
       "style": "normal",
       "check": {
         "hash": "8cf87f4470d0",
-        "heard": "Co.",
+        "heard": "Co?",
         "match": true
       }
     },
     "cedar|snd/c/cukr": {
-      "file": "audio/cedar/snd--c--cukr-62806a8bc084.mp3",
+      "file": "audio/cedar/snd--c--cukr-62806a8bc084-e4c8f979.mp3",
       "hash": "62806a8bc084",
       "text": "cukr",
       "style": "normal",
       "check": {
         "hash": "62806a8bc084",
-        "heard": "Cukr.",
+        "heard": "cukr.",
         "match": true
       }
     },
     "cedar|snd/c/cviciste": {
-      "file": "audio/cedar/snd--c--cviciste-9e37ded59dc1.mp3",
+      "file": "audio/cedar/snd--c--cviciste-9e37ded59dc1-7bb0cb8e.mp3",
       "hash": "9e37ded59dc1",
       "text": "cvičiště",
       "style": "normal",
@@ -72,7 +72,7 @@
       }
     },
     "cedar|snd/ch/chleb": {
-      "file": "audio/cedar/snd--ch--chleb-f82a30c3df03.mp3",
+      "file": "audio/cedar/snd--ch--chleb-f82a30c3df03-d24a0c53.mp3",
       "hash": "f82a30c3df03",
       "text": "chléb",
       "style": "normal",
@@ -83,7 +83,7 @@
       }
     },
     "cedar|snd/ch/strecha": {
-      "file": "audio/cedar/snd--ch--strecha-02a9500105a5.mp3",
+      "file": "audio/cedar/snd--ch--strecha-02a9500105a5-c07583b6.mp3",
       "hash": "02a9500105a5",
       "text": "střecha",
       "style": "normal",
@@ -94,7 +94,7 @@
       }
     },
     "cedar|snd/ch/ucho": {
-      "file": "audio/cedar/snd--ch--ucho-11e739ec6659.mp3",
+      "file": "audio/cedar/snd--ch--ucho-11e739ec6659-62f967fb.mp3",
       "hash": "11e739ec6659",
       "text": "ucho",
       "style": "normal",
@@ -105,7 +105,7 @@
       }
     },
     "cedar|snd/e-hacek/dekuji": {
-      "file": "audio/cedar/snd--e-hacek--dekuji-aa2d63ae22fa.mp3",
+      "file": "audio/cedar/snd--e-hacek--dekuji-aa2d63ae22fa-f01402d4.mp3",
       "hash": "aa2d63ae22fa",
       "text": "děkuji",
       "style": "normal",
@@ -116,7 +116,7 @@
       }
     },
     "cedar|snd/e-hacek/mesto": {
-      "file": "audio/cedar/snd--e-hacek--mesto-556039e6d0e9.mp3",
+      "file": "audio/cedar/snd--e-hacek--mesto-556039e6d0e9-73fbe48c.mp3",
       "hash": "556039e6d0e9",
       "text": "město",
       "style": "normal",
@@ -127,7 +127,7 @@
       }
     },
     "cedar|snd/e-hacek/pet": {
-      "file": "audio/cedar/snd--e-hacek--pet-939635edb76f.mp3",
+      "file": "audio/cedar/snd--e-hacek--pet-939635edb76f-a35bc800.mp3",
       "hash": "939635edb76f",
       "text": "pět",
       "style": "normal",
@@ -138,7 +138,7 @@
       }
     },
     "cedar|snd/h/hora": {
-      "file": "audio/cedar/snd--h--hora-1ec0be6ebda4.mp3",
+      "file": "audio/cedar/snd--h--hora-1ec0be6ebda4-200d57d3.mp3",
       "hash": "1ec0be6ebda4",
       "text": "hora",
       "style": "normal",
@@ -149,7 +149,7 @@
       }
     },
     "cedar|snd/h/praha": {
-      "file": "audio/cedar/snd--h--praha-d786eaaad3ac.mp3",
+      "file": "audio/cedar/snd--h--praha-d786eaaad3ac-31c6f30d.mp3",
       "hash": "d786eaaad3ac",
       "text": "Praha",
       "style": "normal",
@@ -160,7 +160,7 @@
       }
     },
     "cedar|snd/h/toho": {
-      "file": "audio/cedar/snd--h--toho-f55fe6e45b39.mp3",
+      "file": "audio/cedar/snd--h--toho-f55fe6e45b39-d9c3bb25.mp3",
       "hash": "f55fe6e45b39",
       "text": "toho",
       "style": "normal",
@@ -171,7 +171,7 @@
       }
     },
     "cedar|snd/long-vowels/byt": {
-      "file": "audio/cedar/snd--long-vowels--byt-05112eec982b.mp3",
+      "file": "audio/cedar/snd--long-vowels--byt-05112eec982b-1a7e87b1.mp3",
       "hash": "05112eec982b",
       "text": "byt",
       "style": "normal",
@@ -182,7 +182,7 @@
       }
     },
     "cedar|snd/long-vowels/byt-2": {
-      "file": "audio/cedar/snd--long-vowels--byt-2-a484c890c717.mp3",
+      "file": "audio/cedar/snd--long-vowels--byt-2-a484c890c717-ae3dc55e.mp3",
       "hash": "a484c890c717",
       "text": "být",
       "style": "normal",
@@ -193,7 +193,7 @@
       }
     },
     "cedar|snd/long-vowels/dum": {
-      "file": "audio/cedar/snd--long-vowels--dum-5203c795e12e.mp3",
+      "file": "audio/cedar/snd--long-vowels--dum-5203c795e12e-e197a827.mp3",
       "hash": "5203c795e12e",
       "text": "dům",
       "style": "normal",
@@ -204,7 +204,7 @@
       }
     },
     "cedar|snd/r-hacek/dvorak": {
-      "file": "audio/cedar/snd--r-hacek--dvorak-9d317d3e327c.mp3",
+      "file": "audio/cedar/snd--r-hacek--dvorak-9d317d3e327c-bed993c8.mp3",
       "hash": "9d317d3e327c",
       "text": "Dvořák",
       "style": "normal",
@@ -215,7 +215,7 @@
       }
     },
     "cedar|snd/r-hacek/more": {
-      "file": "audio/cedar/snd--r-hacek--more-00f50923902d.mp3",
+      "file": "audio/cedar/snd--r-hacek--more-00f50923902d-96a22f7a.mp3",
       "hash": "00f50923902d",
       "text": "moře",
       "style": "normal",
@@ -226,7 +226,7 @@
       }
     },
     "cedar|snd/r-hacek/reka": {
-      "file": "audio/cedar/snd--r-hacek--reka-2fef20208b97.mp3",
+      "file": "audio/cedar/snd--r-hacek--reka-2fef20208b97-ff70bd32.mp3",
       "hash": "2fef20208b97",
       "text": "řeka",
       "style": "normal",
@@ -237,29 +237,30 @@
       }
     },
     "cedar|snd/r-hacek/tri": {
-      "file": "audio/cedar/snd--r-hacek--tri-83c3e8b14028.mp3",
+      "file": "audio/cedar/snd--r-hacek--tri-83c3e8b14028-240cb50f.mp3",
       "hash": "83c3e8b14028",
       "text": "tři",
       "style": "normal",
       "check": {
         "hash": "83c3e8b14028",
         "heard": "Tři.",
-        "match": true
+        "match": true,
+        "closeness": 1
       }
     },
     "cedar|snd/s-hacek/mys": {
-      "file": "audio/cedar/snd--s-hacek--mys-3543a0e69caa.mp3",
+      "file": "audio/cedar/snd--s-hacek--mys-3543a0e69caa-c148070c.mp3",
       "hash": "3543a0e69caa",
       "text": "myš",
       "style": "normal",
       "check": {
         "hash": "3543a0e69caa",
-        "heard": "Miš.",
+        "heard": "Myš.",
         "match": true
       }
     },
     "cedar|snd/s-hacek/pstros": {
-      "file": "audio/cedar/snd--s-hacek--pstros-ba27b657b4f9.mp3",
+      "file": "audio/cedar/snd--s-hacek--pstros-ba27b657b4f9-7cc8a5e0.mp3",
       "hash": "ba27b657b4f9",
       "text": "pštros",
       "style": "normal",
@@ -270,7 +271,7 @@
       }
     },
     "cedar|snd/s-hacek/sest": {
-      "file": "audio/cedar/snd--s-hacek--sest-2961dc6a2dc3.mp3",
+      "file": "audio/cedar/snd--s-hacek--sest-2961dc6a2dc3-96f319e4.mp3",
       "hash": "2961dc6a2dc3",
       "text": "šest",
       "style": "normal",
@@ -281,7 +282,7 @@
       }
     },
     "cedar|snd/soft-consonants/deti": {
-      "file": "audio/cedar/snd--soft-consonants--deti-c0aa84d96b08.mp3",
+      "file": "audio/cedar/snd--soft-consonants--deti-c0aa84d96b08-b592a6f4.mp3",
       "hash": "c0aa84d96b08",
       "text": "děti",
       "style": "normal",
@@ -292,7 +293,7 @@
       }
     },
     "cedar|snd/soft-consonants/kun": {
-      "file": "audio/cedar/snd--soft-consonants--kun-02c4b8abaaff.mp3",
+      "file": "audio/cedar/snd--soft-consonants--kun-02c4b8abaaff-761c6ea4.mp3",
       "hash": "02c4b8abaaff",
       "text": "kůň",
       "style": "normal",
@@ -303,7 +304,7 @@
       }
     },
     "cedar|snd/soft-consonants/tukat": {
-      "file": "audio/cedar/snd--soft-consonants--tukat-4146d30faa62.mp3",
+      "file": "audio/cedar/snd--soft-consonants--tukat-4146d30faa62-088e9233.mp3",
       "hash": "4146d30faa62",
       "text": "ťukat",
       "style": "normal",
@@ -314,7 +315,7 @@
       }
     },
     "cedar|snd/syllabic-r-l/krk": {
-      "file": "audio/cedar/snd--syllabic-r-l--krk-f1cc602095a4.mp3",
+      "file": "audio/cedar/snd--syllabic-r-l--krk-f1cc602095a4-8f49dbe6.mp3",
       "hash": "f1cc602095a4",
       "text": "krk",
       "style": "normal",
@@ -325,7 +326,7 @@
       }
     },
     "cedar|snd/syllabic-r-l/mlha": {
-      "file": "audio/cedar/snd--syllabic-r-l--mlha-6cf9b58c5137.mp3",
+      "file": "audio/cedar/snd--syllabic-r-l--mlha-6cf9b58c5137-b9130281.mp3",
       "hash": "6cf9b58c5137",
       "text": "mlha",
       "style": "normal",
@@ -336,7 +337,7 @@
       }
     },
     "cedar|snd/syllabic-r-l/prst": {
-      "file": "audio/cedar/snd--syllabic-r-l--prst-362d362f46e0.mp3",
+      "file": "audio/cedar/snd--syllabic-r-l--prst-362d362f46e0-bb4d73f1.mp3",
       "hash": "362d362f46e0",
       "text": "prst",
       "style": "normal",
@@ -347,7 +348,7 @@
       }
     },
     "cedar|snd/syllabic-r-l/vlk": {
-      "file": "audio/cedar/snd--syllabic-r-l--vlk-52bb1fece572.mp3",
+      "file": "audio/cedar/snd--syllabic-r-l--vlk-52bb1fece572-7ff72432.mp3",
       "hash": "52bb1fece572",
       "text": "vlk",
       "style": "normal",
@@ -358,7 +359,7 @@
       }
     },
     "cedar|snd/z-hacek/muze": {
-      "file": "audio/cedar/snd--z-hacek--muze-8e925ba35606.mp3",
+      "file": "audio/cedar/snd--z-hacek--muze-8e925ba35606-ce1b7688.mp3",
       "hash": "8e925ba35606",
       "text": "může",
       "style": "normal",
@@ -369,7 +370,7 @@
       }
     },
     "cedar|snd/z-hacek/zena": {
-      "file": "audio/cedar/snd--z-hacek--zena-9f95c967d117.mp3",
+      "file": "audio/cedar/snd--z-hacek--zena-9f95c967d117-6182c2d7.mp3",
       "hash": "9f95c967d117",
       "text": "žena",
       "style": "normal",
@@ -380,7 +381,7 @@
       }
     },
     "cedar|snd/z-hacek/zivot": {
-      "file": "audio/cedar/snd--z-hacek--zivot-7ccc45365274.mp3",
+      "file": "audio/cedar/snd--z-hacek--zivot-7ccc45365274-ba8e39b2.mp3",
       "hash": "7ccc45365274",
       "text": "život",
       "style": "normal",
@@ -391,7 +392,7 @@
       }
     },
     "cedar|tw/kmotre-petre/0": {
-      "file": "audio/cedar/tw--kmotre-petre--0-dbbe571b3156.mp3",
+      "file": "audio/cedar/tw--kmotre-petre--0-dbbe571b3156-0df38173.mp3",
       "hash": "dbbe571b3156",
       "text": "vepře",
       "style": "normal",
@@ -402,7 +403,7 @@
       }
     },
     "cedar|tw/kmotre-petre/1": {
-      "file": "audio/cedar/tw--kmotre-petre--1-4ab76f0c90c1.mp3",
+      "file": "audio/cedar/tw--kmotre-petre--1-4ab76f0c90c1-ffe8c5e2.mp3",
       "hash": "4ab76f0c90c1",
       "text": "toho vepře",
       "style": "normal",
@@ -413,7 +414,7 @@
       }
     },
     "cedar|tw/kmotre-petre/2": {
-      "file": "audio/cedar/tw--kmotre-petre--2-741faf37a38e.mp3",
+      "file": "audio/cedar/tw--kmotre-petre--2-741faf37a38e-b24c3582.mp3",
       "hash": "741faf37a38e",
       "text": "mi toho vepře",
       "style": "normal",
@@ -424,7 +425,7 @@
       }
     },
     "cedar|tw/kmotre-petre/3": {
-      "file": "audio/cedar/tw--kmotre-petre--3-c46da52c7e31.mp3",
+      "file": "audio/cedar/tw--kmotre-petre--3-c46da52c7e31-69e0d18c.mp3",
       "hash": "c46da52c7e31",
       "text": "nepřepepřete mi toho vepře",
       "style": "normal",
@@ -435,7 +436,7 @@
       }
     },
     "cedar|tw/kmotre-petre/4": {
-      "file": "audio/cedar/tw--kmotre-petre--4-73ee1a4ce5fb.mp3",
+      "file": "audio/cedar/tw--kmotre-petre--4-73ee1a4ce5fb-a05e638e.mp3",
       "hash": "73ee1a4ce5fb",
       "text": "Petře, nepřepepřete mi toho vepře",
       "style": "normal",
@@ -446,7 +447,7 @@
       }
     },
     "cedar|tw/kmotre-petre/5": {
-      "file": "audio/cedar/tw--kmotre-petre--5-99ddcb5c79eb.mp3",
+      "file": "audio/cedar/tw--kmotre-petre--5-99ddcb5c79eb-1013ca09.mp3",
       "hash": "99ddcb5c79eb",
       "text": "Kmotře Petře, nepřepepřete mi toho vepře.",
       "style": "normal",
@@ -457,7 +458,7 @@
       }
     },
     "cedar|tw/kmotre-petre/slow": {
-      "file": "audio/cedar/tw--kmotre-petre--slow-3abf5eab15a6.mp3",
+      "file": "audio/cedar/tw--kmotre-petre--slow-3abf5eab15a6-afba4ef9.mp3",
       "hash": "3abf5eab15a6",
       "text": "Kmotře Petře, nepřepepřete mi toho vepře.",
       "style": "slow",
@@ -468,7 +469,7 @@
       }
     },
     "cedar|tw/na-cvicisti/0": {
-      "file": "audio/cedar/tw--na-cvicisti--0-7c32609868eb.mp3",
+      "file": "audio/cedar/tw--na-cvicisti--0-7c32609868eb-dd8a6acf.mp3",
       "hash": "7c32609868eb",
       "text": "piští",
       "style": "normal",
@@ -479,7 +480,7 @@
       }
     },
     "cedar|tw/na-cvicisti/1": {
-      "file": "audio/cedar/tw--na-cvicisti--1-a69d23f6f03a.mp3",
+      "file": "audio/cedar/tw--na-cvicisti--1-a69d23f6f03a-901a5959.mp3",
       "hash": "a69d23f6f03a",
       "text": "svišti piští",
       "style": "normal",
@@ -490,7 +491,7 @@
       }
     },
     "cedar|tw/na-cvicisti/2": {
-      "file": "audio/cedar/tw--na-cvicisti--2-18dee898e4ad.mp3",
+      "file": "audio/cedar/tw--na-cvicisti--2-18dee898e4ad-3ee3c21f.mp3",
       "hash": "18dee898e4ad",
       "text": "čtyři svišti piští",
       "style": "normal",
@@ -501,7 +502,7 @@
       }
     },
     "cedar|tw/na-cvicisti/3": {
-      "file": "audio/cedar/tw--na-cvicisti--3-e2a5fe2eed8a.mp3",
+      "file": "audio/cedar/tw--na-cvicisti--3-e2a5fe2eed8a-759ecb05.mp3",
       "hash": "e2a5fe2eed8a",
       "text": "Na cvičišti čtyři svišti piští.",
       "style": "normal",
@@ -512,7 +513,7 @@
       }
     },
     "cedar|tw/na-cvicisti/slow": {
-      "file": "audio/cedar/tw--na-cvicisti--slow-b9c33e87610e.mp3",
+      "file": "audio/cedar/tw--na-cvicisti--slow-b9c33e87610e-78500985.mp3",
       "hash": "b9c33e87610e",
       "text": "Na cvičišti čtyři svišti piští.",
       "style": "slow",
@@ -523,7 +524,7 @@
       }
     },
     "cedar|tw/nenaolejuje-li/0": {
-      "file": "audio/cedar/tw--nenaolejuje-li--0-3d7797cc21dc.mp3",
+      "file": "audio/cedar/tw--nenaolejuje-li--0-3d7797cc21dc-19fa8ba9.mp3",
       "hash": "3d7797cc21dc",
       "text": "já",
       "style": "normal",
@@ -534,7 +535,7 @@
       }
     },
     "cedar|tw/nenaolejuje-li/1": {
-      "file": "audio/cedar/tw--nenaolejuje-li--1-f004ddcc9d75.mp3",
+      "file": "audio/cedar/tw--nenaolejuje-li--1-f004ddcc9d75-6a863054.mp3",
       "hash": "f004ddcc9d75",
       "text": "je já",
       "style": "normal",
@@ -545,7 +546,7 @@
       }
     },
     "cedar|tw/nenaolejuje-li/2": {
-      "file": "audio/cedar/tw--nenaolejuje-li--2-2948ff74c0ca.mp3",
+      "file": "audio/cedar/tw--nenaolejuje-li--2-2948ff74c0ca-c694b656.mp3",
       "hash": "2948ff74c0ca",
       "text": "naolejuji je já",
       "style": "normal",
@@ -556,7 +557,7 @@
       }
     },
     "cedar|tw/nenaolejuje-li/3": {
-      "file": "audio/cedar/tw--nenaolejuje-li--3-5d92f11ed5ed.mp3",
+      "file": "audio/cedar/tw--nenaolejuje-li--3-5d92f11ed5ed-035d1681.mp3",
       "hash": "5d92f11ed5ed",
       "text": "Julie, naolejuji je já",
       "style": "normal",
@@ -567,7 +568,7 @@
       }
     },
     "cedar|tw/nenaolejuje-li/4": {
-      "file": "audio/cedar/tw--nenaolejuje-li--4-2a2d306d2835.mp3",
+      "file": "audio/cedar/tw--nenaolejuje-li--4-2a2d306d2835-5362cacb.mp3",
       "hash": "2a2d306d2835",
       "text": "je Julie, naolejuji je já",
       "style": "normal",
@@ -578,7 +579,7 @@
       }
     },
     "cedar|tw/nenaolejuje-li/5": {
-      "file": "audio/cedar/tw--nenaolejuje-li--5-78beec3064d9.mp3",
+      "file": "audio/cedar/tw--nenaolejuje-li--5-78beec3064d9-02f67274.mp3",
       "hash": "78beec3064d9",
       "text": "Nenaolejuje-li je Julie, naolejuji je já.",
       "style": "normal",
@@ -589,7 +590,7 @@
       }
     },
     "cedar|tw/nenaolejuje-li/slow": {
-      "file": "audio/cedar/tw--nenaolejuje-li--slow-792d42fb1cd8.mp3",
+      "file": "audio/cedar/tw--nenaolejuje-li--slow-792d42fb1cd8-5da23972.mp3",
       "hash": "792d42fb1cd8",
       "text": "Nenaolejuje-li je Julie, naolejuji je já.",
       "style": "slow",
@@ -600,7 +601,7 @@
       }
     },
     "cedar|tw/pan-kaplan/0": {
-      "file": "audio/cedar/tw--pan-kaplan--0-76c046e85ab7.mp3",
+      "file": "audio/cedar/tw--pan-kaplan--0-76c046e85ab7-eb5505e5.mp3",
       "hash": "76c046e85ab7",
       "text": "plakal",
       "style": "normal",
@@ -611,7 +612,7 @@
       }
     },
     "cedar|tw/pan-kaplan/1": {
-      "file": "audio/cedar/tw--pan-kaplan--1-25a320f8fb70.mp3",
+      "file": "audio/cedar/tw--pan-kaplan--1-25a320f8fb70-d7679803.mp3",
       "hash": "25a320f8fb70",
       "text": "v kapli plakal",
       "style": "normal",
@@ -622,7 +623,7 @@
       }
     },
     "cedar|tw/pan-kaplan/2": {
-      "file": "audio/cedar/tw--pan-kaplan--2-4ce66c70c006.mp3",
+      "file": "audio/cedar/tw--pan-kaplan--2-4ce66c70c006-6d7e60bc.mp3",
       "hash": "4ce66c70c006",
       "text": "kaplan v kapli plakal",
       "style": "normal",
@@ -633,7 +634,7 @@
       }
     },
     "cedar|tw/pan-kaplan/3": {
-      "file": "audio/cedar/tw--pan-kaplan--3-2a0ece609bc3.mp3",
+      "file": "audio/cedar/tw--pan-kaplan--3-2a0ece609bc3-a4b08d78.mp3",
       "hash": "2a0ece609bc3",
       "text": "Pan kaplan v kapli plakal.",
       "style": "normal",
@@ -644,18 +645,18 @@
       }
     },
     "cedar|tw/pan-kaplan/slow": {
-      "file": "audio/cedar/tw--pan-kaplan--slow-d3d16edb380f.mp3",
+      "file": "audio/cedar/tw--pan-kaplan--slow-d3d16edb380f-2dc6ef8f.mp3",
       "hash": "d3d16edb380f",
       "text": "Pan kaplan v kapli plakal.",
       "style": "slow",
       "check": {
         "hash": "d3d16edb380f",
-        "heard": "Pan Kaplan v kapli plakal.",
+        "heard": "Pan kaplan v kapli plakal.",
         "match": true
       }
     },
     "cedar|tw/sel-pstros/0": {
-      "file": "audio/cedar/tw--sel-pstros--0-36af21ef27dc.mp3",
+      "file": "audio/cedar/tw--sel-pstros--0-36af21ef27dc-761ffce2.mp3",
       "hash": "36af21ef27dc",
       "text": "pštrosáčaty",
       "style": "normal",
@@ -666,7 +667,7 @@
       }
     },
     "cedar|tw/sel-pstros/1": {
-      "file": "audio/cedar/tw--sel-pstros--1-beac98578b1f.mp3",
+      "file": "audio/cedar/tw--sel-pstros--1-beac98578b1f-b583c638.mp3",
       "hash": "beac98578b1f",
       "text": "a pštrosáčaty",
       "style": "normal",
@@ -677,18 +678,18 @@
       }
     },
     "cedar|tw/sel-pstros/2": {
-      "file": "audio/cedar/tw--sel-pstros--2-2d6992a836af.mp3",
+      "file": "audio/cedar/tw--sel-pstros--2-2d6992a836af-6ad24dec.mp3",
       "hash": "2d6992a836af",
       "text": "s pštrosicí a pštrosáčaty",
       "style": "normal",
       "check": {
         "hash": "2d6992a836af",
-        "heard": "Zpštrosicí a pštrosáčaty.",
+        "heard": "S pštrosicí a pštrosáčaty.",
         "match": true
       }
     },
     "cedar|tw/sel-pstros/3": {
-      "file": "audio/cedar/tw--sel-pstros--3-515c2d2c9322.mp3",
+      "file": "audio/cedar/tw--sel-pstros--3-515c2d2c9322-aab851d1.mp3",
       "hash": "515c2d2c9322",
       "text": "pštros s pštrosicí a pštrosáčaty",
       "style": "normal",
@@ -699,7 +700,7 @@
       }
     },
     "cedar|tw/sel-pstros/4": {
-      "file": "audio/cedar/tw--sel-pstros--4-262e8115f96d.mp3",
+      "file": "audio/cedar/tw--sel-pstros--4-262e8115f96d-da945497.mp3",
       "hash": "262e8115f96d",
       "text": "Šel pštros s pštrosicí a pštrosáčaty.",
       "style": "normal",
@@ -710,7 +711,7 @@
       }
     },
     "cedar|tw/sel-pstros/slow": {
-      "file": "audio/cedar/tw--sel-pstros--slow-23bd85a5e33e.mp3",
+      "file": "audio/cedar/tw--sel-pstros--slow-23bd85a5e33e-a3c804c4.mp3",
       "hash": "23bd85a5e33e",
       "text": "Šel pštros s pštrosicí a pštrosáčaty.",
       "style": "slow",
@@ -721,19 +722,19 @@
       }
     },
     "cedar|tw/smrz-pln-skvrn/0": {
-      "file": "audio/cedar/tw--smrz-pln-skvrn--0-ec73f93b0bd1.mp3",
+      "file": "audio/cedar/tw--smrz-pln-skvrn--0-ec73f93b0bd1-37d76a60.mp3",
       "hash": "ec73f93b0bd1",
       "text": "z mlh",
       "style": "normal",
       "check": {
         "hash": "ec73f93b0bd1",
-        "heard": "Zmlh.",
+        "heard": "Z, mlh.",
         "match": true,
         "closeness": 1
       }
     },
     "cedar|tw/smrz-pln-skvrn/1": {
-      "file": "audio/cedar/tw--smrz-pln-skvrn--1-0c2466188e7b.mp3",
+      "file": "audio/cedar/tw--smrz-pln-skvrn--1-0c2466188e7b-66205a91.mp3",
       "hash": "0c2466188e7b",
       "text": "zvlhl z mlh",
       "style": "normal",
@@ -744,18 +745,19 @@
       }
     },
     "cedar|tw/smrz-pln-skvrn/2": {
-      "file": "audio/cedar/tw--smrz-pln-skvrn--2-e8c6fa77ae62.mp3",
+      "file": "audio/cedar/tw--smrz-pln-skvrn--2-e8c6fa77ae62-21aa9975.mp3",
       "hash": "e8c6fa77ae62",
       "text": "skvrn zvlhl z mlh",
       "style": "normal",
       "check": {
         "hash": "e8c6fa77ae62",
-        "heard": "Skvrn, zvlhl, zmlh.",
-        "match": true
+        "heard": "Skvrn zvlhl, zmlh.",
+        "match": true,
+        "closeness": 1
       }
     },
     "cedar|tw/smrz-pln-skvrn/3": {
-      "file": "audio/cedar/tw--smrz-pln-skvrn--3-a776a8be7a5b.mp3",
+      "file": "audio/cedar/tw--smrz-pln-skvrn--3-a776a8be7a5b-2ec04b76.mp3",
       "hash": "a776a8be7a5b",
       "text": "pln skvrn zvlhl z mlh",
       "style": "normal",
@@ -766,7 +768,7 @@
       }
     },
     "cedar|tw/smrz-pln-skvrn/4": {
-      "file": "audio/cedar/tw--smrz-pln-skvrn--4-948d463e0a45.mp3",
+      "file": "audio/cedar/tw--smrz-pln-skvrn--4-948d463e0a45-4d305782.mp3",
       "hash": "948d463e0a45",
       "text": "Smrž pln skvrn zvlhl z mlh.",
       "style": "normal",
@@ -778,7 +780,7 @@
       }
     },
     "cedar|tw/smrz-pln-skvrn/slow": {
-      "file": "audio/cedar/tw--smrz-pln-skvrn--slow-5005d440d6c5.mp3",
+      "file": "audio/cedar/tw--smrz-pln-skvrn--slow-5005d440d6c5-cdb86c3d.mp3",
       "hash": "5005d440d6c5",
       "text": "Smrž pln skvrn zvlhl z mlh.",
       "style": "slow",
@@ -790,7 +792,7 @@
       }
     },
     "cedar|tw/strc-prst-skrz-krk/0": {
-      "file": "audio/cedar/tw--strc-prst-skrz-krk--0-f1cc602095a4.mp3",
+      "file": "audio/cedar/tw--strc-prst-skrz-krk--0-f1cc602095a4-a83fb4d3.mp3",
       "hash": "f1cc602095a4",
       "text": "krk",
       "style": "normal",
@@ -801,7 +803,7 @@
       }
     },
     "cedar|tw/strc-prst-skrz-krk/1": {
-      "file": "audio/cedar/tw--strc-prst-skrz-krk--1-48f058215df6.mp3",
+      "file": "audio/cedar/tw--strc-prst-skrz-krk--1-48f058215df6-ca093b3c.mp3",
       "hash": "48f058215df6",
       "text": "skrz krk",
       "style": "normal",
@@ -812,7 +814,7 @@
       }
     },
     "cedar|tw/strc-prst-skrz-krk/2": {
-      "file": "audio/cedar/tw--strc-prst-skrz-krk--2-a6e546af0025.mp3",
+      "file": "audio/cedar/tw--strc-prst-skrz-krk--2-a6e546af0025-ca0076aa.mp3",
       "hash": "a6e546af0025",
       "text": "prst skrz krk",
       "style": "normal",
@@ -823,7 +825,7 @@
       }
     },
     "cedar|tw/strc-prst-skrz-krk/3": {
-      "file": "audio/cedar/tw--strc-prst-skrz-krk--3-f050bf58809d.mp3",
+      "file": "audio/cedar/tw--strc-prst-skrz-krk--3-f050bf58809d-a3f1c461.mp3",
       "hash": "f050bf58809d",
       "text": "Strč prst skrz krk.",
       "style": "normal",
@@ -834,7 +836,7 @@
       }
     },
     "cedar|tw/strc-prst-skrz-krk/slow": {
-      "file": "audio/cedar/tw--strc-prst-skrz-krk--slow-7e444b5a3a57.mp3",
+      "file": "audio/cedar/tw--strc-prst-skrz-krk--slow-7e444b5a3a57-ebd87a7f.mp3",
       "hash": "7e444b5a3a57",
       "text": "Strč prst skrz krk.",
       "style": "slow",
@@ -845,7 +847,7 @@
       }
     },
     "cedar|tw/tri-sta-tricet-tri/0": {
-      "file": "audio/cedar/tw--tri-sta-tricet-tri--0-9be64a3b4fdb.mp3",
+      "file": "audio/cedar/tw--tri-sta-tricet-tri--0-9be64a3b4fdb-66913dcc.mp3",
       "hash": "9be64a3b4fdb",
       "text": "střech",
       "style": "normal",
@@ -856,7 +858,7 @@
       }
     },
     "cedar|tw/tri-sta-tricet-tri/1": {
-      "file": "audio/cedar/tw--tri-sta-tricet-tri--1-c2e94f93d63a.mp3",
+      "file": "audio/cedar/tw--tri-sta-tricet-tri--1-c2e94f93d63a-6a9168b2.mp3",
       "hash": "c2e94f93d63a",
       "text": "stříbrných střech",
       "style": "normal",
@@ -867,7 +869,7 @@
       }
     },
     "cedar|tw/tri-sta-tricet-tri/2": {
-      "file": "audio/cedar/tw--tri-sta-tricet-tri--2-7c4bde3added.mp3",
+      "file": "audio/cedar/tw--tri-sta-tricet-tri--2-7c4bde3added-c2872615.mp3",
       "hash": "7c4bde3added",
       "text": "tři sta třicet tři stříbrných střech",
       "style": "normal",
@@ -878,7 +880,7 @@
       }
     },
     "cedar|tw/tri-sta-tricet-tri/3": {
-      "file": "audio/cedar/tw--tri-sta-tricet-tri--3-877f1314a466.mp3",
+      "file": "audio/cedar/tw--tri-sta-tricet-tri--3-877f1314a466-51327624.mp3",
       "hash": "877f1314a466",
       "text": "stříkalo přes tři sta třicet tři stříbrných střech",
       "style": "normal",
@@ -889,7 +891,7 @@
       }
     },
     "cedar|tw/tri-sta-tricet-tri/4": {
-      "file": "audio/cedar/tw--tri-sta-tricet-tri--4-ad7190e3b837.mp3",
+      "file": "audio/cedar/tw--tri-sta-tricet-tri--4-ad7190e3b837-fbf36202.mp3",
       "hash": "ad7190e3b837",
       "text": "Tři sta třicet tři stříbrných stříkaček stříkalo přes tři sta třicet tři stříbrných střech.",
       "style": "normal",
@@ -900,7 +902,7 @@
       }
     },
     "cedar|tw/tri-sta-tricet-tri/slow": {
-      "file": "audio/cedar/tw--tri-sta-tricet-tri--slow-38de50506838.mp3",
+      "file": "audio/cedar/tw--tri-sta-tricet-tri--slow-38de50506838-a07dd843.mp3",
       "hash": "38de50506838",
       "text": "Tři sta třicet tři stříbrných stříkaček stříkalo přes tři sta třicet tři stříbrných střech.",
       "style": "slow",
@@ -911,29 +913,31 @@
       }
     },
     "cedar|tw/vlky-plky/0": {
-      "file": "audio/cedar/tw--vlky-plky--0-54cb9ae790e9.mp3",
+      "file": "audio/cedar/tw--vlky-plky--0-54cb9ae790e9-3ddaff59.mp3",
       "hash": "54cb9ae790e9",
       "text": "plky",
       "style": "normal",
       "check": {
         "hash": "54cb9ae790e9",
-        "heard": "Blky.",
-        "match": true
+        "heard": "Plky.",
+        "match": true,
+        "closeness": 1
       }
     },
     "cedar|tw/vlky-plky/1": {
-      "file": "audio/cedar/tw--vlky-plky--1-89e85bbab7e5.mp3",
+      "file": "audio/cedar/tw--vlky-plky--1-89e85bbab7e5-ae6cc055.mp3",
       "hash": "89e85bbab7e5",
       "text": "Vlky plky.",
       "style": "normal",
       "check": {
         "hash": "89e85bbab7e5",
-        "heard": "Vlky plky.",
-        "match": true
+        "heard": "Vlky, plky.",
+        "match": true,
+        "closeness": 1
       }
     },
     "cedar|tw/vlky-plky/slow": {
-      "file": "audio/cedar/tw--vlky-plky--slow-d31cb725e866.mp3",
+      "file": "audio/cedar/tw--vlky-plky--slow-d31cb725e866-ae8752d1.mp3",
       "hash": "d31cb725e866",
       "text": "Vlky plky.",
       "style": "slow",
@@ -944,7 +948,7 @@
       }
     },
     "marin|snd/c-hacek/caj": {
-      "file": "audio/marin/snd--c-hacek--caj-21817251a1a8.mp3",
+      "file": "audio/marin/snd--c-hacek--caj-21817251a1a8-ae51b37e.mp3",
       "hash": "21817251a1a8",
       "text": "čaj",
       "style": "normal",
@@ -955,7 +959,7 @@
       }
     },
     "marin|snd/c-hacek/ctyri": {
-      "file": "audio/marin/snd--c-hacek--ctyri-c2fb66a47c75.mp3",
+      "file": "audio/marin/snd--c-hacek--ctyri-c2fb66a47c75-dec0991f.mp3",
       "hash": "c2fb66a47c75",
       "text": "čtyři",
       "style": "normal",
@@ -966,7 +970,7 @@
       }
     },
     "marin|snd/c-hacek/oci": {
-      "file": "audio/marin/snd--c-hacek--oci-4dd2f9c776d5.mp3",
+      "file": "audio/marin/snd--c-hacek--oci-4dd2f9c776d5-11c126c9.mp3",
       "hash": "4dd2f9c776d5",
       "text": "oči",
       "style": "normal",
@@ -977,7 +981,7 @@
       }
     },
     "marin|snd/c/co": {
-      "file": "audio/marin/snd--c--co-d360b01ed7b6.mp3",
+      "file": "audio/marin/snd--c--co-d360b01ed7b6-5b6878ee.mp3",
       "hash": "d360b01ed7b6",
       "text": "co",
       "style": "normal",
@@ -988,7 +992,7 @@
       }
     },
     "marin|snd/c/cukr": {
-      "file": "audio/marin/snd--c--cukr-a20f9c66de6f.mp3",
+      "file": "audio/marin/snd--c--cukr-a20f9c66de6f-960ea1df.mp3",
       "hash": "a20f9c66de6f",
       "text": "cukr",
       "style": "normal",
@@ -999,7 +1003,7 @@
       }
     },
     "marin|snd/c/cviciste": {
-      "file": "audio/marin/snd--c--cviciste-419cffc24ccc.mp3",
+      "file": "audio/marin/snd--c--cviciste-419cffc24ccc-cb4ddacc.mp3",
       "hash": "419cffc24ccc",
       "text": "cvičiště",
       "style": "normal",
@@ -1010,7 +1014,7 @@
       }
     },
     "marin|snd/ch/chleb": {
-      "file": "audio/marin/snd--ch--chleb-0ec273c32cef.mp3",
+      "file": "audio/marin/snd--ch--chleb-0ec273c32cef-5ece51e6.mp3",
       "hash": "0ec273c32cef",
       "text": "chléb",
       "style": "normal",
@@ -1021,7 +1025,7 @@
       }
     },
     "marin|snd/ch/strecha": {
-      "file": "audio/marin/snd--ch--strecha-5efb902b297a.mp3",
+      "file": "audio/marin/snd--ch--strecha-5efb902b297a-c176c99f.mp3",
       "hash": "5efb902b297a",
       "text": "střecha",
       "style": "normal",
@@ -1032,7 +1036,7 @@
       }
     },
     "marin|snd/ch/ucho": {
-      "file": "audio/marin/snd--ch--ucho-016d8e91c37c.mp3",
+      "file": "audio/marin/snd--ch--ucho-016d8e91c37c-5648f62c.mp3",
       "hash": "016d8e91c37c",
       "text": "ucho",
       "style": "normal",
@@ -1043,7 +1047,7 @@
       }
     },
     "marin|snd/e-hacek/dekuji": {
-      "file": "audio/marin/snd--e-hacek--dekuji-dc983dc2f832.mp3",
+      "file": "audio/marin/snd--e-hacek--dekuji-dc983dc2f832-21028631.mp3",
       "hash": "dc983dc2f832",
       "text": "děkuji",
       "style": "normal",
@@ -1054,7 +1058,7 @@
       }
     },
     "marin|snd/e-hacek/mesto": {
-      "file": "audio/marin/snd--e-hacek--mesto-b2db1e53cca8.mp3",
+      "file": "audio/marin/snd--e-hacek--mesto-b2db1e53cca8-25c58344.mp3",
       "hash": "b2db1e53cca8",
       "text": "město",
       "style": "normal",
@@ -1065,7 +1069,7 @@
       }
     },
     "marin|snd/e-hacek/pet": {
-      "file": "audio/marin/snd--e-hacek--pet-57242e6c62da.mp3",
+      "file": "audio/marin/snd--e-hacek--pet-57242e6c62da-ef3aca9c.mp3",
       "hash": "57242e6c62da",
       "text": "pět",
       "style": "normal",
@@ -1076,7 +1080,7 @@
       }
     },
     "marin|snd/h/hora": {
-      "file": "audio/marin/snd--h--hora-4f828ba65cdc.mp3",
+      "file": "audio/marin/snd--h--hora-4f828ba65cdc-f1f29819.mp3",
       "hash": "4f828ba65cdc",
       "text": "hora",
       "style": "normal",
@@ -1087,7 +1091,7 @@
       }
     },
     "marin|snd/h/praha": {
-      "file": "audio/marin/snd--h--praha-d178e847ebbd.mp3",
+      "file": "audio/marin/snd--h--praha-d178e847ebbd-47cc95e4.mp3",
       "hash": "d178e847ebbd",
       "text": "Praha",
       "style": "normal",
@@ -1098,7 +1102,7 @@
       }
     },
     "marin|snd/h/toho": {
-      "file": "audio/marin/snd--h--toho-66bfa3dc0e85.mp3",
+      "file": "audio/marin/snd--h--toho-66bfa3dc0e85-84d345ed.mp3",
       "hash": "66bfa3dc0e85",
       "text": "toho",
       "style": "normal",
@@ -1109,7 +1113,7 @@
       }
     },
     "marin|snd/long-vowels/byt": {
-      "file": "audio/marin/snd--long-vowels--byt-9fa0389ffc9f.mp3",
+      "file": "audio/marin/snd--long-vowels--byt-9fa0389ffc9f-96e1dd93.mp3",
       "hash": "9fa0389ffc9f",
       "text": "byt",
       "style": "normal",
@@ -1120,7 +1124,7 @@
       }
     },
     "marin|snd/long-vowels/byt-2": {
-      "file": "audio/marin/snd--long-vowels--byt-2-b51c517f8ccb.mp3",
+      "file": "audio/marin/snd--long-vowels--byt-2-b51c517f8ccb-21cf451c.mp3",
       "hash": "b51c517f8ccb",
       "text": "být",
       "style": "normal",
@@ -1131,7 +1135,7 @@
       }
     },
     "marin|snd/long-vowels/dum": {
-      "file": "audio/marin/snd--long-vowels--dum-c3addca8bee4.mp3",
+      "file": "audio/marin/snd--long-vowels--dum-c3addca8bee4-536a9dfa.mp3",
       "hash": "c3addca8bee4",
       "text": "dům",
       "style": "normal",
@@ -1142,7 +1146,7 @@
       }
     },
     "marin|snd/r-hacek/dvorak": {
-      "file": "audio/marin/snd--r-hacek--dvorak-988058afd5ae.mp3",
+      "file": "audio/marin/snd--r-hacek--dvorak-988058afd5ae-e2d06cd4.mp3",
       "hash": "988058afd5ae",
       "text": "Dvořák",
       "style": "normal",
@@ -1153,7 +1157,7 @@
       }
     },
     "marin|snd/r-hacek/more": {
-      "file": "audio/marin/snd--r-hacek--more-0dae327630c9.mp3",
+      "file": "audio/marin/snd--r-hacek--more-0dae327630c9-50221a72.mp3",
       "hash": "0dae327630c9",
       "text": "moře",
       "style": "normal",
@@ -1164,7 +1168,7 @@
       }
     },
     "marin|snd/r-hacek/reka": {
-      "file": "audio/marin/snd--r-hacek--reka-460f9d105568.mp3",
+      "file": "audio/marin/snd--r-hacek--reka-460f9d105568-1cd37b7e.mp3",
       "hash": "460f9d105568",
       "text": "řeka",
       "style": "normal",
@@ -1175,7 +1179,7 @@
       }
     },
     "marin|snd/r-hacek/tri": {
-      "file": "audio/marin/snd--r-hacek--tri-fea853dca0b0.mp3",
+      "file": "audio/marin/snd--r-hacek--tri-fea853dca0b0-2df7490b.mp3",
       "hash": "fea853dca0b0",
       "text": "tři",
       "style": "normal",
@@ -1186,18 +1190,19 @@
       }
     },
     "marin|snd/s-hacek/mys": {
-      "file": "audio/marin/snd--s-hacek--mys-a7c5797e6c6e.mp3",
+      "file": "audio/marin/snd--s-hacek--mys-a7c5797e6c6e-e4961e65.mp3",
       "hash": "a7c5797e6c6e",
       "text": "myš",
       "style": "normal",
       "check": {
         "hash": "a7c5797e6c6e",
         "heard": "Myš.",
-        "match": true
+        "match": true,
+        "closeness": 1
       }
     },
     "marin|snd/s-hacek/pstros": {
-      "file": "audio/marin/snd--s-hacek--pstros-6f645bfa3a80.mp3",
+      "file": "audio/marin/snd--s-hacek--pstros-6f645bfa3a80-18ec383e.mp3",
       "hash": "6f645bfa3a80",
       "text": "pštros",
       "style": "normal",
@@ -1208,7 +1213,7 @@
       }
     },
     "marin|snd/s-hacek/sest": {
-      "file": "audio/marin/snd--s-hacek--sest-91e90c50e5cb.mp3",
+      "file": "audio/marin/snd--s-hacek--sest-91e90c50e5cb-4c37021f.mp3",
       "hash": "91e90c50e5cb",
       "text": "šest",
       "style": "normal",
@@ -1219,7 +1224,7 @@
       }
     },
     "marin|snd/soft-consonants/deti": {
-      "file": "audio/marin/snd--soft-consonants--deti-c32ba5411850.mp3",
+      "file": "audio/marin/snd--soft-consonants--deti-c32ba5411850-1b72aebf.mp3",
       "hash": "c32ba5411850",
       "text": "děti",
       "style": "normal",
@@ -1230,7 +1235,7 @@
       }
     },
     "marin|snd/soft-consonants/kun": {
-      "file": "audio/marin/snd--soft-consonants--kun-44d652e61bdf.mp3",
+      "file": "audio/marin/snd--soft-consonants--kun-44d652e61bdf-87d3250f.mp3",
       "hash": "44d652e61bdf",
       "text": "kůň",
       "style": "normal",
@@ -1241,7 +1246,7 @@
       }
     },
     "marin|snd/soft-consonants/tukat": {
-      "file": "audio/marin/snd--soft-consonants--tukat-291b5b794fc3.mp3",
+      "file": "audio/marin/snd--soft-consonants--tukat-291b5b794fc3-17ecf578.mp3",
       "hash": "291b5b794fc3",
       "text": "ťukat",
       "style": "normal",
@@ -1252,7 +1257,7 @@
       }
     },
     "marin|snd/syllabic-r-l/krk": {
-      "file": "audio/marin/snd--syllabic-r-l--krk-6ace90e541c9.mp3",
+      "file": "audio/marin/snd--syllabic-r-l--krk-6ace90e541c9-4250f0a5.mp3",
       "hash": "6ace90e541c9",
       "text": "krk",
       "style": "normal",
@@ -1263,18 +1268,18 @@
       }
     },
     "marin|snd/syllabic-r-l/mlha": {
-      "file": "audio/marin/snd--syllabic-r-l--mlha-e1a2461adfac.mp3",
+      "file": "audio/marin/snd--syllabic-r-l--mlha-e1a2461adfac-ffef57a4.mp3",
       "hash": "e1a2461adfac",
       "text": "mlha",
       "style": "normal",
       "check": {
         "hash": "e1a2461adfac",
-        "heard": "mlha.",
+        "heard": "mlha",
         "match": true
       }
     },
     "marin|snd/syllabic-r-l/prst": {
-      "file": "audio/marin/snd--syllabic-r-l--prst-0aba1a9358a9.mp3",
+      "file": "audio/marin/snd--syllabic-r-l--prst-0aba1a9358a9-b0d51055.mp3",
       "hash": "0aba1a9358a9",
       "text": "prst",
       "style": "normal",
@@ -1285,7 +1290,7 @@
       }
     },
     "marin|snd/syllabic-r-l/vlk": {
-      "file": "audio/marin/snd--syllabic-r-l--vlk-b07061fd36a5.mp3",
+      "file": "audio/marin/snd--syllabic-r-l--vlk-b07061fd36a5-77cfb5c8.mp3",
       "hash": "b07061fd36a5",
       "text": "vlk",
       "style": "normal",
@@ -1296,7 +1301,7 @@
       }
     },
     "marin|snd/z-hacek/muze": {
-      "file": "audio/marin/snd--z-hacek--muze-5e306ceab3f5.mp3",
+      "file": "audio/marin/snd--z-hacek--muze-5e306ceab3f5-2ef47f26.mp3",
       "hash": "5e306ceab3f5",
       "text": "může",
       "style": "normal",
@@ -1307,7 +1312,7 @@
       }
     },
     "marin|snd/z-hacek/zena": {
-      "file": "audio/marin/snd--z-hacek--zena-c99da97f9d44.mp3",
+      "file": "audio/marin/snd--z-hacek--zena-c99da97f9d44-5542e1e9.mp3",
       "hash": "c99da97f9d44",
       "text": "žena",
       "style": "normal",
@@ -1318,7 +1323,7 @@
       }
     },
     "marin|snd/z-hacek/zivot": {
-      "file": "audio/marin/snd--z-hacek--zivot-09f3a4ce573f.mp3",
+      "file": "audio/marin/snd--z-hacek--zivot-09f3a4ce573f-caef8fb8.mp3",
       "hash": "09f3a4ce573f",
       "text": "život",
       "style": "normal",
@@ -1329,7 +1334,7 @@
       }
     },
     "marin|tw/kmotre-petre/0": {
-      "file": "audio/marin/tw--kmotre-petre--0-df56a9d9ce95.mp3",
+      "file": "audio/marin/tw--kmotre-petre--0-df56a9d9ce95-aa93fb8f.mp3",
       "hash": "df56a9d9ce95",
       "text": "vepře",
       "style": "normal",
@@ -1340,7 +1345,7 @@
       }
     },
     "marin|tw/kmotre-petre/1": {
-      "file": "audio/marin/tw--kmotre-petre--1-a487ad103cb8.mp3",
+      "file": "audio/marin/tw--kmotre-petre--1-a487ad103cb8-98b65f83.mp3",
       "hash": "a487ad103cb8",
       "text": "toho vepře",
       "style": "normal",
@@ -1351,7 +1356,7 @@
       }
     },
     "marin|tw/kmotre-petre/2": {
-      "file": "audio/marin/tw--kmotre-petre--2-9193e06bd1f0.mp3",
+      "file": "audio/marin/tw--kmotre-petre--2-9193e06bd1f0-51b92a50.mp3",
       "hash": "9193e06bd1f0",
       "text": "mi toho vepře",
       "style": "normal",
@@ -1362,7 +1367,7 @@
       }
     },
     "marin|tw/kmotre-petre/3": {
-      "file": "audio/marin/tw--kmotre-petre--3-fbb7559d58cd.mp3",
+      "file": "audio/marin/tw--kmotre-petre--3-fbb7559d58cd-04886f5c.mp3",
       "hash": "fbb7559d58cd",
       "text": "nepřepepřete mi toho vepře",
       "style": "normal",
@@ -1373,7 +1378,7 @@
       }
     },
     "marin|tw/kmotre-petre/4": {
-      "file": "audio/marin/tw--kmotre-petre--4-81a53ad0f69c.mp3",
+      "file": "audio/marin/tw--kmotre-petre--4-81a53ad0f69c-bbab9a3c.mp3",
       "hash": "81a53ad0f69c",
       "text": "Petře, nepřepepřete mi toho vepře",
       "style": "normal",
@@ -1384,7 +1389,7 @@
       }
     },
     "marin|tw/kmotre-petre/5": {
-      "file": "audio/marin/tw--kmotre-petre--5-b82d2bae3039.mp3",
+      "file": "audio/marin/tw--kmotre-petre--5-b82d2bae3039-46cecc5a.mp3",
       "hash": "b82d2bae3039",
       "text": "Kmotře Petře, nepřepepřete mi toho vepře.",
       "style": "normal",
@@ -1395,7 +1400,7 @@
       }
     },
     "marin|tw/kmotre-petre/slow": {
-      "file": "audio/marin/tw--kmotre-petre--slow-165d25b95a9c.mp3",
+      "file": "audio/marin/tw--kmotre-petre--slow-165d25b95a9c-1ef1eb9a.mp3",
       "hash": "165d25b95a9c",
       "text": "Kmotře Petře, nepřepepřete mi toho vepře.",
       "style": "slow",
@@ -1406,7 +1411,7 @@
       }
     },
     "marin|tw/na-cvicisti/0": {
-      "file": "audio/marin/tw--na-cvicisti--0-641849ca3a4f.mp3",
+      "file": "audio/marin/tw--na-cvicisti--0-641849ca3a4f-794cee9b.mp3",
       "hash": "641849ca3a4f",
       "text": "piští",
       "style": "normal",
@@ -1417,7 +1422,7 @@
       }
     },
     "marin|tw/na-cvicisti/1": {
-      "file": "audio/marin/tw--na-cvicisti--1-e838e683aaed.mp3",
+      "file": "audio/marin/tw--na-cvicisti--1-e838e683aaed-88a7cda4.mp3",
       "hash": "e838e683aaed",
       "text": "svišti piští",
       "style": "normal",
@@ -1428,7 +1433,7 @@
       }
     },
     "marin|tw/na-cvicisti/2": {
-      "file": "audio/marin/tw--na-cvicisti--2-f267772d28ce.mp3",
+      "file": "audio/marin/tw--na-cvicisti--2-f267772d28ce-f1a9d2cd.mp3",
       "hash": "f267772d28ce",
       "text": "čtyři svišti piští",
       "style": "normal",
@@ -1439,7 +1444,7 @@
       }
     },
     "marin|tw/na-cvicisti/3": {
-      "file": "audio/marin/tw--na-cvicisti--3-a766c3b7cba7.mp3",
+      "file": "audio/marin/tw--na-cvicisti--3-a766c3b7cba7-1b08daa1.mp3",
       "hash": "a766c3b7cba7",
       "text": "Na cvičišti čtyři svišti piští.",
       "style": "normal",
@@ -1450,7 +1455,7 @@
       }
     },
     "marin|tw/na-cvicisti/slow": {
-      "file": "audio/marin/tw--na-cvicisti--slow-10148c84d0e2.mp3",
+      "file": "audio/marin/tw--na-cvicisti--slow-10148c84d0e2-51c07001.mp3",
       "hash": "10148c84d0e2",
       "text": "Na cvičišti čtyři svišti piští.",
       "style": "slow",
@@ -1461,7 +1466,7 @@
       }
     },
     "marin|tw/nenaolejuje-li/0": {
-      "file": "audio/marin/tw--nenaolejuje-li--0-d0c6c1ab35a3.mp3",
+      "file": "audio/marin/tw--nenaolejuje-li--0-d0c6c1ab35a3-780d1560.mp3",
       "hash": "d0c6c1ab35a3",
       "text": "já",
       "style": "normal",
@@ -1472,7 +1477,7 @@
       }
     },
     "marin|tw/nenaolejuje-li/1": {
-      "file": "audio/marin/tw--nenaolejuje-li--1-ef27260a9c3d.mp3",
+      "file": "audio/marin/tw--nenaolejuje-li--1-ef27260a9c3d-ce6f6da2.mp3",
       "hash": "ef27260a9c3d",
       "text": "je já",
       "style": "normal",
@@ -1483,7 +1488,7 @@
       }
     },
     "marin|tw/nenaolejuje-li/2": {
-      "file": "audio/marin/tw--nenaolejuje-li--2-c3087ed197a2.mp3",
+      "file": "audio/marin/tw--nenaolejuje-li--2-c3087ed197a2-d0fd20a8.mp3",
       "hash": "c3087ed197a2",
       "text": "naolejuji je já",
       "style": "normal",
@@ -1494,7 +1499,7 @@
       }
     },
     "marin|tw/nenaolejuje-li/3": {
-      "file": "audio/marin/tw--nenaolejuje-li--3-97a9ce0b1b6d.mp3",
+      "file": "audio/marin/tw--nenaolejuje-li--3-97a9ce0b1b6d-e1770aca.mp3",
       "hash": "97a9ce0b1b6d",
       "text": "Julie, naolejuji je já",
       "style": "normal",
@@ -1505,18 +1510,18 @@
       }
     },
     "marin|tw/nenaolejuje-li/4": {
-      "file": "audio/marin/tw--nenaolejuje-li--4-6134c6d37e2b.mp3",
+      "file": "audio/marin/tw--nenaolejuje-li--4-6134c6d37e2b-bdb87d80.mp3",
       "hash": "6134c6d37e2b",
       "text": "je Julie, naolejuji je já",
       "style": "normal",
       "check": {
         "hash": "6134c6d37e2b",
-        "heard": "Je Julie, naolejuji je já.",
+        "heard": "Je Julie, na olejuji je já.",
         "match": true
       }
     },
     "marin|tw/nenaolejuje-li/5": {
-      "file": "audio/marin/tw--nenaolejuje-li--5-2e3bd7c209da.mp3",
+      "file": "audio/marin/tw--nenaolejuje-li--5-2e3bd7c209da-ac033410.mp3",
       "hash": "2e3bd7c209da",
       "text": "Nenaolejuje-li je Julie, naolejuji je já.",
       "style": "normal",
@@ -1527,7 +1532,7 @@
       }
     },
     "marin|tw/nenaolejuje-li/slow": {
-      "file": "audio/marin/tw--nenaolejuje-li--slow-8c1eb9948f8e.mp3",
+      "file": "audio/marin/tw--nenaolejuje-li--slow-8c1eb9948f8e-8977650c.mp3",
       "hash": "8c1eb9948f8e",
       "text": "Nenaolejuje-li je Julie, naolejuji je já.",
       "style": "slow",
@@ -1538,7 +1543,7 @@
       }
     },
     "marin|tw/pan-kaplan/0": {
-      "file": "audio/marin/tw--pan-kaplan--0-e2726a7f8964.mp3",
+      "file": "audio/marin/tw--pan-kaplan--0-e2726a7f8964-06f7a11b.mp3",
       "hash": "e2726a7f8964",
       "text": "plakal",
       "style": "normal",
@@ -1549,7 +1554,7 @@
       }
     },
     "marin|tw/pan-kaplan/1": {
-      "file": "audio/marin/tw--pan-kaplan--1-ba8ff923058f.mp3",
+      "file": "audio/marin/tw--pan-kaplan--1-ba8ff923058f-df7a0e4f.mp3",
       "hash": "ba8ff923058f",
       "text": "v kapli plakal",
       "style": "normal",
@@ -1560,7 +1565,7 @@
       }
     },
     "marin|tw/pan-kaplan/2": {
-      "file": "audio/marin/tw--pan-kaplan--2-a37e520573a5.mp3",
+      "file": "audio/marin/tw--pan-kaplan--2-a37e520573a5-03d3fdd7.mp3",
       "hash": "a37e520573a5",
       "text": "kaplan v kapli plakal",
       "style": "normal",
@@ -1571,7 +1576,7 @@
       }
     },
     "marin|tw/pan-kaplan/3": {
-      "file": "audio/marin/tw--pan-kaplan--3-e580dd2a5361.mp3",
+      "file": "audio/marin/tw--pan-kaplan--3-e580dd2a5361-96871f5e.mp3",
       "hash": "e580dd2a5361",
       "text": "Pan kaplan v kapli plakal.",
       "style": "normal",
@@ -1582,18 +1587,19 @@
       }
     },
     "marin|tw/pan-kaplan/slow": {
-      "file": "audio/marin/tw--pan-kaplan--slow-715c65f3b33a.mp3",
+      "file": "audio/marin/tw--pan-kaplan--slow-715c65f3b33a-2529479d.mp3",
       "hash": "715c65f3b33a",
       "text": "Pan kaplan v kapli plakal.",
       "style": "slow",
       "check": {
         "hash": "715c65f3b33a",
         "heard": "Pan Kaplan v kapli plakal.",
-        "match": true
+        "match": true,
+        "closeness": 1
       }
     },
     "marin|tw/sel-pstros/0": {
-      "file": "audio/marin/tw--sel-pstros--0-bf6a81eaeead.mp3",
+      "file": "audio/marin/tw--sel-pstros--0-bf6a81eaeead-46224b0e.mp3",
       "hash": "bf6a81eaeead",
       "text": "pštrosáčaty",
       "style": "normal",
@@ -1604,7 +1610,7 @@
       }
     },
     "marin|tw/sel-pstros/1": {
-      "file": "audio/marin/tw--sel-pstros--1-ba2583b03748.mp3",
+      "file": "audio/marin/tw--sel-pstros--1-ba2583b03748-28276a19.mp3",
       "hash": "ba2583b03748",
       "text": "a pštrosáčaty",
       "style": "normal",
@@ -1615,7 +1621,7 @@
       }
     },
     "marin|tw/sel-pstros/2": {
-      "file": "audio/marin/tw--sel-pstros--2-eedb03511d76.mp3",
+      "file": "audio/marin/tw--sel-pstros--2-eedb03511d76-3c116642.mp3",
       "hash": "eedb03511d76",
       "text": "s pštrosicí a pštrosáčaty",
       "style": "normal",
@@ -1626,7 +1632,7 @@
       }
     },
     "marin|tw/sel-pstros/3": {
-      "file": "audio/marin/tw--sel-pstros--3-a7d4a08496bb.mp3",
+      "file": "audio/marin/tw--sel-pstros--3-a7d4a08496bb-26cbf28f.mp3",
       "hash": "a7d4a08496bb",
       "text": "pštros s pštrosicí a pštrosáčaty",
       "style": "normal",
@@ -1637,7 +1643,7 @@
       }
     },
     "marin|tw/sel-pstros/4": {
-      "file": "audio/marin/tw--sel-pstros--4-aea8457d91f2.mp3",
+      "file": "audio/marin/tw--sel-pstros--4-aea8457d91f2-1a95543c.mp3",
       "hash": "aea8457d91f2",
       "text": "Šel pštros s pštrosicí a pštrosáčaty.",
       "style": "normal",
@@ -1648,7 +1654,7 @@
       }
     },
     "marin|tw/sel-pstros/slow": {
-      "file": "audio/marin/tw--sel-pstros--slow-3740b73c09d2.mp3",
+      "file": "audio/marin/tw--sel-pstros--slow-3740b73c09d2-d2526d28.mp3",
       "hash": "3740b73c09d2",
       "text": "Šel pštros s pštrosicí a pštrosáčaty.",
       "style": "slow",
@@ -1659,18 +1665,19 @@
       }
     },
     "marin|tw/smrz-pln-skvrn/0": {
-      "file": "audio/marin/tw--smrz-pln-skvrn--0-e08adb49ba73.mp3",
+      "file": "audio/marin/tw--smrz-pln-skvrn--0-e08adb49ba73-73e092f8.mp3",
       "hash": "e08adb49ba73",
       "text": "z mlh",
       "style": "normal",
       "check": {
         "hash": "e08adb49ba73",
-        "heard": "Smlh.",
-        "match": true
+        "heard": "Z mlh.",
+        "match": true,
+        "closeness": 1
       }
     },
     "marin|tw/smrz-pln-skvrn/1": {
-      "file": "audio/marin/tw--smrz-pln-skvrn--1-5b3a550d6a3a.mp3",
+      "file": "audio/marin/tw--smrz-pln-skvrn--1-5b3a550d6a3a-8097b6ce.mp3",
       "hash": "5b3a550d6a3a",
       "text": "zvlhl z mlh",
       "style": "normal",
@@ -1682,7 +1689,7 @@
       }
     },
     "marin|tw/smrz-pln-skvrn/2": {
-      "file": "audio/marin/tw--smrz-pln-skvrn--2-48783282b206.mp3",
+      "file": "audio/marin/tw--smrz-pln-skvrn--2-48783282b206-17facb80.mp3",
       "hash": "48783282b206",
       "text": "skvrn zvlhl z mlh",
       "style": "normal",
@@ -1693,7 +1700,7 @@
       }
     },
     "marin|tw/smrz-pln-skvrn/3": {
-      "file": "audio/marin/tw--smrz-pln-skvrn--3-6d9edefa6d85.mp3",
+      "file": "audio/marin/tw--smrz-pln-skvrn--3-6d9edefa6d85-f73460c4.mp3",
       "hash": "6d9edefa6d85",
       "text": "pln skvrn zvlhl z mlh",
       "style": "normal",
@@ -1704,7 +1711,7 @@
       }
     },
     "marin|tw/smrz-pln-skvrn/4": {
-      "file": "audio/marin/tw--smrz-pln-skvrn--4-ed286bfcc6f9.mp3",
+      "file": "audio/marin/tw--smrz-pln-skvrn--4-ed286bfcc6f9-2dda74c6.mp3",
       "hash": "ed286bfcc6f9",
       "text": "Smrž pln skvrn zvlhl z mlh.",
       "style": "normal",
@@ -1716,19 +1723,19 @@
       }
     },
     "marin|tw/smrz-pln-skvrn/slow": {
-      "file": "audio/marin/tw--smrz-pln-skvrn--slow-88e9dafb2d67.mp3",
+      "file": "audio/marin/tw--smrz-pln-skvrn--slow-88e9dafb2d67-d061d8e9.mp3",
       "hash": "88e9dafb2d67",
       "text": "Smrž pln skvrn zvlhl z mlh.",
       "style": "slow",
       "check": {
         "hash": "88e9dafb2d67",
-        "heard": "Smršť, pln skvrn, zvlhl, zmoh.",
+        "heard": "Smršť pln skvrn, zvlhl z mlh.",
         "match": false,
-        "closeness": 0.91
+        "closeness": 0.95
       }
     },
     "marin|tw/strc-prst-skrz-krk/0": {
-      "file": "audio/marin/tw--strc-prst-skrz-krk--0-6ace90e541c9.mp3",
+      "file": "audio/marin/tw--strc-prst-skrz-krk--0-6ace90e541c9-d8a0a617.mp3",
       "hash": "6ace90e541c9",
       "text": "krk",
       "style": "normal",
@@ -1739,7 +1746,7 @@
       }
     },
     "marin|tw/strc-prst-skrz-krk/1": {
-      "file": "audio/marin/tw--strc-prst-skrz-krk--1-f285fdd9f2ea.mp3",
+      "file": "audio/marin/tw--strc-prst-skrz-krk--1-f285fdd9f2ea-509806af.mp3",
       "hash": "f285fdd9f2ea",
       "text": "skrz krk",
       "style": "normal",
@@ -1750,7 +1757,7 @@
       }
     },
     "marin|tw/strc-prst-skrz-krk/2": {
-      "file": "audio/marin/tw--strc-prst-skrz-krk--2-84f122269539.mp3",
+      "file": "audio/marin/tw--strc-prst-skrz-krk--2-84f122269539-acd992e5.mp3",
       "hash": "84f122269539",
       "text": "prst skrz krk",
       "style": "normal",
@@ -1761,7 +1768,7 @@
       }
     },
     "marin|tw/strc-prst-skrz-krk/3": {
-      "file": "audio/marin/tw--strc-prst-skrz-krk--3-f1113738ccfd.mp3",
+      "file": "audio/marin/tw--strc-prst-skrz-krk--3-f1113738ccfd-da003dfb.mp3",
       "hash": "f1113738ccfd",
       "text": "Strč prst skrz krk.",
       "style": "normal",
@@ -1772,7 +1779,7 @@
       }
     },
     "marin|tw/strc-prst-skrz-krk/slow": {
-      "file": "audio/marin/tw--strc-prst-skrz-krk--slow-05a1bf9d64d6.mp3",
+      "file": "audio/marin/tw--strc-prst-skrz-krk--slow-05a1bf9d64d6-9a9975ee.mp3",
       "hash": "05a1bf9d64d6",
       "text": "Strč prst skrz krk.",
       "style": "slow",
@@ -1783,7 +1790,7 @@
       }
     },
     "marin|tw/tri-sta-tricet-tri/0": {
-      "file": "audio/marin/tw--tri-sta-tricet-tri--0-25b749ef4d3a.mp3",
+      "file": "audio/marin/tw--tri-sta-tricet-tri--0-25b749ef4d3a-4c8ca881.mp3",
       "hash": "25b749ef4d3a",
       "text": "střech",
       "style": "normal",
@@ -1794,7 +1801,7 @@
       }
     },
     "marin|tw/tri-sta-tricet-tri/1": {
-      "file": "audio/marin/tw--tri-sta-tricet-tri--1-a999cea17da9.mp3",
+      "file": "audio/marin/tw--tri-sta-tricet-tri--1-a999cea17da9-81f17a7c.mp3",
       "hash": "a999cea17da9",
       "text": "stříbrných střech",
       "style": "normal",
@@ -1805,7 +1812,7 @@
       }
     },
     "marin|tw/tri-sta-tricet-tri/2": {
-      "file": "audio/marin/tw--tri-sta-tricet-tri--2-a309ee37d602.mp3",
+      "file": "audio/marin/tw--tri-sta-tricet-tri--2-a309ee37d602-561b8b79.mp3",
       "hash": "a309ee37d602",
       "text": "tři sta třicet tři stříbrných střech",
       "style": "normal",
@@ -1816,7 +1823,7 @@
       }
     },
     "marin|tw/tri-sta-tricet-tri/3": {
-      "file": "audio/marin/tw--tri-sta-tricet-tri--3-76c038b56f2e.mp3",
+      "file": "audio/marin/tw--tri-sta-tricet-tri--3-76c038b56f2e-483e9211.mp3",
       "hash": "76c038b56f2e",
       "text": "stříkalo přes tři sta třicet tři stříbrných střech",
       "style": "normal",
@@ -1827,7 +1834,7 @@
       }
     },
     "marin|tw/tri-sta-tricet-tri/4": {
-      "file": "audio/marin/tw--tri-sta-tricet-tri--4-9c9b5ded1f91.mp3",
+      "file": "audio/marin/tw--tri-sta-tricet-tri--4-9c9b5ded1f91-784c5405.mp3",
       "hash": "9c9b5ded1f91",
       "text": "Tři sta třicet tři stříbrných stříkaček stříkalo přes tři sta třicet tři stříbrných střech.",
       "style": "normal",
@@ -1838,7 +1845,7 @@
       }
     },
     "marin|tw/tri-sta-tricet-tri/slow": {
-      "file": "audio/marin/tw--tri-sta-tricet-tri--slow-ffbd0f4c40b6.mp3",
+      "file": "audio/marin/tw--tri-sta-tricet-tri--slow-ffbd0f4c40b6-75a13a4f.mp3",
       "hash": "ffbd0f4c40b6",
       "text": "Tři sta třicet tři stříbrných stříkaček stříkalo přes tři sta třicet tři stříbrných střech.",
       "style": "slow",
@@ -1849,7 +1856,7 @@
       }
     },
     "marin|tw/vlky-plky/0": {
-      "file": "audio/marin/tw--vlky-plky--0-b18594049a07.mp3",
+      "file": "audio/marin/tw--vlky-plky--0-b18594049a07-9466bd21.mp3",
       "hash": "b18594049a07",
       "text": "plky",
       "style": "normal",
@@ -1860,7 +1867,7 @@
       }
     },
     "marin|tw/vlky-plky/1": {
-      "file": "audio/marin/tw--vlky-plky--1-80c8a729f4b8.mp3",
+      "file": "audio/marin/tw--vlky-plky--1-80c8a729f4b8-e55d25ea.mp3",
       "hash": "80c8a729f4b8",
       "text": "Vlky plky.",
       "style": "normal",
@@ -1871,7 +1878,7 @@
       }
     },
     "marin|tw/vlky-plky/slow": {
-      "file": "audio/marin/tw--vlky-plky--slow-f54769703cb2.mp3",
+      "file": "audio/marin/tw--vlky-plky--slow-f54769703cb2-21949a22.mp3",
       "hash": "f54769703cb2",
       "text": "Vlky plky.",
       "style": "slow",

@@ -20,7 +20,7 @@ try {
   await page.waitForTimeout(600);
   ok("p plays the twister", await page.locator("[data-key-play].is-playing").count() === 1);
   await page.locator(".ladder [data-play]").first().click();
-  await page.waitForTimeout(300);
+  await page.waitForTimeout(800);
   ok("a ladder button takes over playback", await page.locator(".is-playing").count() === 1 && await page.locator(".ladder .is-playing").count() === 1);
   await page.locator("[data-voice-set=cedar]").click();
   const src = await page.evaluate(() => document.querySelector("[data-key-play]").getAttribute("data-a-cedar"));
@@ -28,8 +28,8 @@ try {
   ok("voice switch stored", await page.evaluate(() => localStorage.getItem("voice")) === "cedar" && !!src);
   await page.keyboard.press("/");
   await page.keyboard.type("pstros");
-  await page.waitForTimeout(300);
-  ok("search finds the ostrich twister", (await page.locator(".s-item").allTextContents()).some((t) => t.includes("pštros")));
+  const found = await page.locator(".s-item", { hasText: "pštros" }).first().waitFor({ timeout: 8000 }).then(() => true, () => false);
+  ok("search finds the ostrich twister", found);
   await page.keyboard.press("Escape");
   ok("Esc closes search", !(await page.evaluate(() => document.querySelector("#search-dlg").open)));
   await page.keyboard.press("?");

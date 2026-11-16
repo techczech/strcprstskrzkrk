@@ -42,3 +42,13 @@ test("the build has no API calls, keys or external scripts", { skip: !existsSync
     assert.doesNotMatch(s, /<script[^>]+src="https?:/, f);
   }
 });
+
+test("the sound key applies Czech voicing in context only", async () => {
+  const { soundKey } = await import("../scripts/audio.mjs");
+  const same = (a, b) => soundKey(a) === soundKey(b);
+  assert.ok(same("skrz krk", "skrs krk"), "z before k devoices");
+  assert.ok(same("Smrž pln", "Smrš pln"), "ž before p devoices");
+  assert.ok(same("z mlh", "zmlch"), "final h is ch; word breaks do not count");
+  assert.ok(!same("plky", "blky"), "p before l stays voiceless");
+  assert.ok(!same("naolejuji", "naolejuje"), "vowels differ");
+});

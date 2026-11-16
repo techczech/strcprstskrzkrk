@@ -15,12 +15,14 @@ const $$ = <T extends Element = HTMLElement>(s: string, root: ParentNode = docum
 
 // ---- Voice -----------------------------------------------------------------------------------------------
 const voiceButtons = () => $$<HTMLButtonElement>("[data-voice-set]");
+// The current choice lives in memory; storage only remembers it between visits, so a blocked store still works.
+let chosenVoice: string | null = readPref("voice");
 export function voice(): string {
   const ids = voiceButtons().map((b) => b.dataset.voiceSet!);
-  const v = readPref("voice");
-  return v && ids.includes(v) ? v : ids[0] ?? "marin";
+  return chosenVoice && ids.includes(chosenVoice) ? chosenVoice : ids[0] ?? "marin";
 }
 function setVoice(v: string, announce = false) {
+  chosenVoice = v;
   writePref("voice", v);
   voiceButtons().forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.voiceSet === v)));
   if (announce) toast(`Voice: ${voiceButtons().find((b) => b.dataset.voiceSet === v)?.textContent ?? v}`);
@@ -29,32 +31,46 @@ function setVoice(v: string, announce = false) {
 // ---- Audio -----------------------------------------------------------------------------------------------
 const player = new Audio();
 let current: HTMLElement | null = null;
-let onEnd: (() => void) | null = null;
+let onEnd: ((played: boolean) => void) | null = null;
+let session = 0; // each playback gets a number, so late events from an earlier clip are ignored
 
+/** Stops playback and settles the waiting promise (resolved false: stopped, not finished). */
 function stop() {
+  session++;
   player.pause();
   current?.classList.remove("is-playing");
   current?.setAttribute("aria-pressed", "false");
   current = null;
+  const r = onEnd;
   onEnd = null;
+  r?.(false);
+}
+function finish(id: number, error?: string) {
+  if (id !== session) return;
+  if (error) toast(error, { error: true });
+  const r = onEnd;
+  onEnd = null;
+  stop();
+  r?.(!error);
 }
 export function srcFor(el: HTMLElement): string | null {
   return el.getAttribute(`data-a-${voice()}`) ?? el.getAttribute("href");
 }
-/** Plays a URL and marks the button that started it. Resolves when playback ends or is stopped. */
-export function playUrl(url: string, btn: HTMLElement | null): Promise<void> {
+/** Plays a URL and marks the button that started it. Resolves true when it played to the end, false when stopped or failed. */
+export function playUrl(url: string, btn: HTMLElement | null): Promise<boolean> {
   stop();
+  const id = session;
   return new Promise((resolve) => {
     current = btn;
     btn?.classList.add("is-playing");
     btn?.setAttribute("aria-pressed", "true");
     onEnd = resolve;
     player.src = url;
-    player.play().catch(() => { toast("The audio could not play. Try again.", { error: true }); const r = onEnd; stop(); r?.(); });
+    player.play().catch((e) => { if (e?.name !== "AbortError") finish(id, "The audio could not play. Try again."); });
   });
 }
-player.addEventListener("ended", () => { const r = onEnd; stop(); r?.(); });
-player.addEventListener("error", () => { if (!current) return; toast("The audio could not load. Try again.", { error: true }); const r = onEnd; stop(); r?.(); });
+player.addEventListener("ended", () => finish(session));
+player.addEventListener("error", () => { if (current) finish(session, "The audio could not load. Try again."); });
 
 function initPlayButtons() {
   for (const a of $$("[data-play]")) {
@@ -62,7 +78,7 @@ function initPlayButtons() {
     a.setAttribute("aria-pressed", "false");
     a.addEventListener("click", (e) => {
       e.preventDefault();
-      if (current === a) { const r = onEnd; stop(); r?.(); return; }
+      if (current === a) { stop(); return; }
       const url = srcFor(a);
       if (url) playUrl(url, a);
     });

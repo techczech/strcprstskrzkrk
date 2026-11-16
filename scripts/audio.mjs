@@ -11,7 +11,7 @@
 // generate and check need OPENAI_API_KEY in the environment; run them through scripts/with-openai-key.sh,
 // which hands the key from Bitwarden to this process only. The key is never written to disk or printed.
 import { createHash } from "node:crypto";
-import { mkdir, readFile, writeFile, unlink, readdir } from "node:fs/promises";
+import { mkdir, readFile, writeFile, unlink, readdir, rename } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 
@@ -58,17 +58,29 @@ export async function wantedClips() {
   for (const voice of Object.keys(VOICES))
     for (const c of clips) {
       const hash = createHash("sha256").update([MODEL, voice, STYLE[c.style], c.text].join("\u0000")).digest("hex").slice(0, 12);
-      out.push({ ...c, voice, id: `${voice}|${c.key}`, hash, file: `audio/${voice}/${c.key.replaceAll("/", "--")}-${hash}.mp3` });
+      out.push({ ...c, voice, id: `${voice}|${c.key}`, hash });
     }
   return out;
 }
 
+/** The published file name carries a digest of the audio itself, so a new take never reuses a URL cached as immutable. */
+const fileFor = (c, buf) => `audio/${c.voice}/${c.key.replaceAll("/", "--")}-${c.hash}-${createHash("sha256").update(buf).digest("hex").slice(0, 8)}.mp3`;
+
 async function loadManifest() {
-  try { return JSON.parse(await readFile(MANIFEST, "utf8")); } catch { return { model: MODEL, voices: VOICES, clips: {} }; }
+  let raw;
+  try { raw = await readFile(MANIFEST, "utf8"); } catch (e) { if (e.code === "ENOENT") return { model: MODEL, voices: VOICES, clips: {} }; throw e; }
+  return JSON.parse(raw); // a corrupt manifest stops the run rather than silently regenerating everything
 }
-async function saveManifest(m) {
-  const clips = Object.fromEntries(Object.entries(m.clips).sort(([a], [b]) => a.localeCompare(b)));
-  await writeFile(MANIFEST, JSON.stringify({ model: MODEL, voices: VOICES, clips }, null, 2) + "\n");
+let saving = Promise.resolve();
+/** Writes the manifest atomically (temp file, then rename); calls are queued so concurrent workers never interleave. */
+function saveManifest(m) {
+  saving = saving.then(async () => {
+    const clips = Object.fromEntries(Object.entries(m.clips).sort(([a], [b]) => a.localeCompare(b)));
+    const tmp = `${MANIFEST}.tmp`;
+    await writeFile(tmp, JSON.stringify({ model: MODEL, voices: VOICES, clips }, null, 2) + "\n");
+    await rename(tmp, MANIFEST);
+  });
+  return saving;
 }
 
 function needKey() {
@@ -89,11 +101,21 @@ async function tts(key, clip) {
   }
 }
 
-// A rough sound key: spelling differences that sound the same (word breaks, final devoicing, i/y, ú/ů) compare equal.
-export const soundKey = (s) =>
-  s.toLowerCase().replace(/[^\p{L}]/gu, "").replace(/ch/g, "x")
-    .replace(/[žz]/g, (c) => (c === "ž" ? "š" : "s")).replace(/h/g, "x").replace(/d/g, "t").replace(/ď/g, "ť")
-    .replace(/b/g, "p").replace(/v/g, "f").replace(/g/g, "k").replace(/y/g, "i").replace(/ý/g, "í").replace(/ů/g, "ú");
+// A sound key that applies Czech voicing rules in context only: obstruents devoice at the end of an utterance and
+// take the voicing of a following obstruent (v does not voice what precedes it); word breaks, i/y and ú/ů do not
+// count. Contrasts elsewhere stay distinct, so "plky" and "blky" differ.
+const VOICED = { b: "p", d: "t", ď: "ť", g: "k", v: "f", z: "s", ž: "š", h: "x" };
+const VOICELESS = Object.fromEntries(Object.entries(VOICED).map(([v, u]) => [u, v]));
+export function soundKey(s) {
+  const c = Array.from(s.toLowerCase().replace(/ch/g, "x").replace(/[^\p{L}]/gu, "").replace(/y/g, "i").replace(/ý/g, "í").replace(/ů/g, "ú"));
+  for (let i = c.length - 1; i >= 0; i--) {
+    const next = c[i + 1];
+    if (next === undefined) { if (VOICED[c[i]]) c[i] = VOICED[c[i]]; continue; }
+    if (VOICED[c[i]] && VOICELESS[next]) c[i] = VOICED[c[i]];
+    else if (VOICELESS[c[i]] && VOICED[next] && next !== "v") c[i] = VOICELESS[c[i]];
+  }
+  return c.join("");
+}
 const sameSound = (a, b) => soundKey(a) === soundKey(b);
 /** 0..1 closeness of two texts by sound key (1 - edit distance / length). */
 function closeness(a, b) {
@@ -127,7 +149,7 @@ async function main(cmd) {
   const m = await loadManifest();
   // "generate --retry-flagged" also redoes clips whose last check did not match, with more attempts.
   const retry = process.argv.includes("--retry-flagged");
-  const todo = wanted.filter((c) => m.clips[c.id]?.hash !== c.hash || !existsSync(path.join(ROOT, "public", c.file)) || (retry && m.clips[c.id]?.check?.match === false));
+  const todo = wanted.filter((c) => m.clips[c.id]?.hash !== c.hash || !existsSync(path.join(ROOT, "public", m.clips[c.id].file)) || (retry && m.clips[c.id]?.check?.match === false));
   const keep = new Set(wanted.map((c) => c.id));
   const orphans = Object.keys(m.clips).filter((id) => !keep.has(id));
 
@@ -153,13 +175,15 @@ async function main(cmd) {
         if (score > best) { best = score; buf = b; heard = h; }
         if (sameSound(h, c.text)) break;
       }
-      await mkdir(path.dirname(path.join(ROOT, "public", c.file)), { recursive: true });
-      await writeFile(path.join(ROOT, "public", c.file), buf);
+      const file = fileFor(c, buf);
+      await mkdir(path.dirname(path.join(ROOT, "public", file)), { recursive: true });
+      await writeFile(path.join(ROOT, "public", file), buf);
       const old = m.clips[c.id];
-      if (old && old.file !== c.file && existsSync(path.join(ROOT, "public", old.file))) await unlink(path.join(ROOT, "public", old.file));
-      m.clips[c.id] = { file: c.file, hash: c.hash, text: c.text, style: c.style, check: { hash: c.hash, heard, match: sameSound(heard, c.text), closeness: Math.round(best * 100) / 100 } };
-      done++;
-      if (done % 10 === 0) { console.log(`  ${done}/${todo.length}`); await saveManifest(m); }
+      m.clips[c.id] = { file, hash: c.hash, text: c.text, style: c.style, check: { hash: c.hash, heard, match: sameSound(heard, c.text), closeness: Math.round(best * 100) / 100 } };
+      // The manifest points at the new file before the old one is deleted, so an interruption never leaves a dangling reference.
+      await saveManifest(m);
+      if (old && old.file !== file && existsSync(path.join(ROOT, "public", old.file))) await unlink(path.join(ROOT, "public", old.file));
+      if (++done % 10 === 0) console.log(`  ${done}/${todo.length}`);
     });
     for (const id of orphans) {
       const f = path.join(ROOT, "public", m.clips[id].file);
@@ -184,7 +208,7 @@ async function main(cmd) {
     const pending = Object.entries(m.clips).filter(([, v]) => process.argv[3] === "--all" || !v.check || v.check.hash !== v.hash);
     await pool(pending, 4, async ([id, v]) => {
       const heard = await transcribe(key, await readFile(path.join(ROOT, "public", v.file)));
-      v.check = { hash: v.hash, heard, match: sameSound(heard, v.text) };
+      v.check = { ...v.check, hash: v.hash, heard, match: sameSound(heard, v.text) };
     });
     await saveManifest(m);
     const bad = Object.entries(m.clips).filter(([, v]) => v.check && !v.check.match);
