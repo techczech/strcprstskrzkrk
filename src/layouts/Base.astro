@@ -3,6 +3,8 @@ import "@fontsource-variable/fraunces/wght.css";
 import "@fontsource-variable/inter/wght.css";
 import "../styles/kit/dialog.css";
 import "../styles/site.css";
+import Citation from "../components/Citation.astro";
+import { citationHead, type CitePage } from "../scripts/kit/citation";
 import Icon from "../components/Icon.astro";
 import VoiceSwitch from "../components/VoiceSwitch.astro";
 import { themePrepaint } from "../scripts/kit/theme";
@@ -12,6 +14,7 @@ interface Props { title: string; description: string; nav?: "home" | "sounds" | 
 const { title, description, nav, jsonld, md } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const fullTitle = title.includes("Strč prst skrz krk") ? title : `${title} · Strč prst skrz krk`;
+const citation: CitePage = { title, url: canonical, site: "Strč prst skrz krk", authors: ["Dominik Lukeš"] };
 ---
 <!doctype html>
 <html lang="en">
@@ -24,9 +27,8 @@ const fullTitle = title.includes("Strč prst skrz krk") ? title : `${title} · S
   <link rel="canonical" href={canonical} />
   <meta name="color-scheme" content="light dark" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content={fullTitle} />
+  <Fragment set:html={citationHead(citation)} />
   <meta property="og:description" content={description} />
-  <meta property="og:url" content={canonical} />
   <meta property="og:locale" content="en_GB" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="alternate" type="text/plain" href="/llms.txt" title="Text version for agents" />
@@ -51,6 +53,7 @@ const fullTitle = title.includes("Strč prst skrz krk") ? title : `${title} · S
   </header>
   <main id="main" tabindex="-1"><slot /></main>
   <footer class="site-foot">
+    {nav && <Citation page={citation} />}
     <div class="wrap">
       <div>
         <p>Conceived and designed by <a href="https://dominiklukes.net/">Dominik Lukeš</a>.</p>

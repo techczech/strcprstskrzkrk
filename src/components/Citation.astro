@@ -1,0 +1,16 @@
+---
+import { citeBlockHtml, type CitePage } from "../scripts/kit/citation";
+interface Props { page: CitePage }
+const { page } = Astro.props;
+---
+<div class="page-citation" set:html={citeBlockHtml(page)} />
+<script>
+  import { initCopy } from "../scripts/kit/copy";
+  initCopy();
+</script>
+<style>
+  .page-citation { max-width: 75ch; margin: 2rem auto; padding: 1rem; border-top: 1px solid currentColor; overflow-wrap: anywhere; font-size: 1rem; }
+  .page-citation :global(h2) { font-size: 1.25rem; margin: 0 0 .75rem; }
+  .page-citation :global(p) { margin: 0 0 .75rem; }
+  .page-citation :global(button) { font: inherit; border: 1px solid currentColor; border-radius: .25rem; padding: .4rem .75rem; cursor: pointer; }
+</style>
