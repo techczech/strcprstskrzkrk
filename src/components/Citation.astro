@@ -3,7 +3,7 @@ import { citeBlockHtml, type CitePage } from "../scripts/kit/citation";
 interface Props { page: CitePage }
 const { page } = Astro.props;
 ---
-<div class="page-citation" set:html={citeBlockHtml(page)} />
+<div class="page-citation" set:html={citeBlockHtml(page).replaceAll("cite-h", "page-cite-h").replaceAll("cite-text", "page-cite-text")} />
 <script>
   import { initCopy } from "../scripts/kit/copy";
   initCopy();

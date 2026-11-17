@@ -24,7 +24,7 @@ class Page(HTMLParser):
         if tag == "link" and a.get("rel") == "canonical":
             self.canonicals.append(a.get("href"))
         self.coins |= "Z3988" in (a.get("class") or "").split()
-        self.cites += tag == "h2" and a.get("id") == "cite-h"
+        self.cites += tag == "h2" and a.get("id") == "page-cite-h"
 
     def handle_endtag(self, tag):
         if tag == "head":
