@@ -41,3 +41,11 @@ python3 <bws-skill>/scripts/bws_manager.py run --secret-id <CLOUDFLARE_API_TOKEN
 Fonts: Fraunces and Inter (fontsource, OFL); IPA in a Latin-plus-IPA subset of Charis 7 by SIL (`public/fonts/`, OFL).
 
 The previous version (Google AI Studio app on Cloud Run with live Gemini speech) is in Git history before the `astro-rebuild` branch.
+
+## Page citations
+
+The Astro layout emits reference-manager metadata at build time using the unchanged
+web-design-elements citation kit in `src/scripts/kit/`. Page citations use the
+published author and publication metadata; undated pages omit dates. Content pages
+have a copyable citation, with tool citations in the existing footer area.
+Run `npm run check:citations` after building to check every owned HTML page.
